@@ -153,6 +153,7 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     
     #unzip
     addon_temp = os.path.join(addon_temp, "%s-%s" %(addon_id, git_branch) )
+    os.makedirs(addon_temp)
     do_unzip(temp_file, addon_temp)
     
     #if alt addonid is given, change the addonid (used for beta skin versions)
