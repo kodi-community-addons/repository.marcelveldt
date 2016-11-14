@@ -385,7 +385,9 @@ def create_repository(
         
     # create temp folder
     #data_path = os.path.expanduser(args.datadir)
+   
     temp_folder = os.path.join(target_folder, "temp")
+    cleanup_dir(temp_folder)
     if not os.path.exists(temp_folder):
         os.makedirs(temp_folder)
 
@@ -431,16 +433,20 @@ def create_repository(
         sig.write(digest)
         
     #cleanup temp files
+    cleanup_dir(temp_folder)
+
+def cleanup_dir(directory):
+    #cleanup directory from disk
     success = False
     while not success:
         try:
-            if os.path.exists(temp_folder):
-                shutil.rmtree(temp_folder, ignore_errors=False)
+            if os.path.exists(directory):
+                shutil.rmtree(directory, ignore_errors=False)
             success = True
         except Exception as exc:
             print exc
-            time.sleep(1)
-
+            time.sleep(0.5)
+    
 
 def main():
     parser = argparse.ArgumentParser(
