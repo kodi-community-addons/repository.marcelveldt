@@ -263,6 +263,7 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
                 addon_metadata.id,
                 os.path.relpath(root, addon_location))
             for relative_path in files:
+                print relative_path
                 archive.write(
                     os.path.join(root, relative_path).encode("utf-8"),
                     os.path.join(relative_root, relative_path).encode("utf-8"))
