@@ -264,8 +264,8 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
                 os.path.relpath(root, addon_location))
             for relative_path in files:
                 archive.write(
-                    os.path.join(root, relative_path),
-                    os.path.join(relative_root, relative_path))
+                    os.path.join(root, relative_path).encode("utf-8"),
+                    os.path.join(relative_root, relative_path).encode("utf-8"))
 
     if not samefile(addon_location, addon_target_folder):
         copy_metadata_files(
