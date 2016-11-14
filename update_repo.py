@@ -342,21 +342,23 @@ def do_unzip(zip_path, targetdir):
     zip_file = zipfile.ZipFile(zip_path, 'r')
     for fileinfo in zip_file.infolist():
         filename = fileinfo.filename
-        basedir = os.path.dirname(os.path.join(targetdir, filename))
-        print basedir
-        if not os.path.isdir(basedir):
-            os.makedirs(basedir)
-        filename = os.path.join(targetdir, filename)
-        print "unzipping %s" % filename
-        try:
-            #newer python uses unicode
-            outputfile = open(filename, "wb")
-        except Exception:
-            #older python uses utf-8
-            outputfile = open(filename.encode("utf-8"), "wb")
-        #use shutil to support non-ascii formatted files in the zip
-        shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
-        outputfile.close()
+        cur_path = os.path.join(targetdir, filename)
+        if not os.path.isdir(cur_path):
+            basedir = os.path.dirname(cur_path)
+            print basedir
+            if not os.path.isdir(basedir):
+                os.makedirs(basedir)
+            filename = os.path.join(targetdir, filename)
+            print "unzipping %s" % filename
+            try:
+                #newer python uses unicode
+                outputfile = open(filename, "wb")
+            except Exception:
+                #older python uses utf-8
+                outputfile = open(filename.encode("utf-8"), "wb")
+            #use shutil to support non-ascii formatted files in the zip
+            shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
+            outputfile.close()
     zip_file.close()
     print "UNZIP DONE of file %s  to path %s " %(zipfile,path)
     
