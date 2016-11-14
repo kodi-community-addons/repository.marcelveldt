@@ -184,28 +184,29 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
 
    
 def fetch_addon_from_folder(raw_addon_location, target_folder):
-    addon_location = os.path.abspath(raw_addon_location)
-    metadata_path = os.path.join(addon_location, INFO_BASENAME)
-    addon_metadata = parse_metadata(metadata_path)
-    addon_target_folder = os.path.join(target_folder, addon_metadata.id)
-    
-    if os.path.exists(metadata_path):
-        #check current version
-        cur_metadata = parse_metadata(os.path.join(addon_target_folder, INFO_BASENAME))
-        if cur_metadata.version == addon_metadata.version:
-            print "Addon %s already has version %s on the repo, skipping..." % (addon_metadata.id, addon_metadata.version)
-            return cur_metadata
-    
-    #if skin addon, build textures...
-    if addon_metadata.id.startswith("skin."):
-        buildskintextures(raw_addon_location)
-
-    # Create the compressed add-on archive.
-    if not os.path.isdir(addon_target_folder):
-        os.mkdir(addon_target_folder)
-    archive_path = os.path.join(
-        addon_target_folder, get_archive_basename(addon_metadata))
     try:
+        addon_location = os.path.abspath(raw_addon_location)
+        metadata_path = os.path.join(addon_location, INFO_BASENAME)
+        addon_metadata = parse_metadata(metadata_path)
+        addon_target_folder = os.path.join(target_folder, addon_metadata.id)
+        
+        if os.path.exists(metadata_path):
+            #check current version
+            cur_metadata = parse_metadata(os.path.join(addon_target_folder, INFO_BASENAME))
+            if cur_metadata.version == addon_metadata.version:
+                print "Addon %s already has version %s on the repo, skipping..." % (addon_metadata.id, addon_metadata.version)
+                return cur_metadata
+        
+        #if skin addon, build textures...
+        if addon_metadata.id.startswith("skin."):
+            buildskintextures(raw_addon_location)
+
+        # Create the compressed add-on archive.
+        if not os.path.isdir(addon_target_folder):
+            os.mkdir(addon_target_folder)
+        archive_path = os.path.join(
+            addon_target_folder, get_archive_basename(addon_metadata))
+    
         with zipfile.ZipFile(
                 archive_path, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
             for (root, dirs, files) in os.walk(addon_location.decode("utf-8")):
@@ -216,15 +217,14 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
                     sourcefile = os.path.join(root, relative_path)
                     destfile = os.path.join(relative_root, relative_path)
                     archive.write(sourcefile, destfile)
+                    
+        copy_metadata_files(
+            addon_location, addon_target_folder, addon_metadata)
 
     except Exception as exc:
         print format_exc(sys.exc_info())
         raise exc
         
-    if not samefile(addon_location, addon_target_folder):
-        copy_metadata_files(
-            addon_location, addon_target_folder, addon_metadata)
-
     return addon_metadata
     
 def buildskintextures(addon_folder):
