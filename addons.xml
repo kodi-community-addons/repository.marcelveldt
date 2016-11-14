@@ -1,0 +1,395 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons><addon id="repository.marcelveldt" name="Marcelveldt's BETA repository" provider-name="marcelveldt" version="1.0.0">
+	
+	<extension name="Marcelveldt's BETA repository" point="xbmc.addon.repository">
+		<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repo.marcelveldt/master/addons.xml</info>
+		<checksum>https://raw.githubusercontent.com/marcelveldt/repo.marcelveldt/master/addons.xml.md5</checksum>
+		<datadir zip="true">https://raw.githubusercontent.com/marcelveldt/repo.marcelveldt/master/</datadir>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Kodi repository for beta/test versions of Marcelveldt's addons</summary>
+		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.requests" version="2.3.0" />
+        <import addon="script.module.beautifulsoup" version="3.0.8" />
+        <import addon="script.module.thetvdb" version="0.0.1" />
+        <import addon="script.module.musicbrainz" version="0.0.1" />
+        <import addon="script.module.simplecache" version="1.0.0" />
+        <import addon="script.module.arrow" version="0.6.0" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Metadata and artwork from common sources TMDB, IMDB and fanart.tv </summary>
+        <description>
+            The Skin Helper artwork and metadata module provides rich metadata, including artwork for 
+            various metatypes by scraping this information from sites like TMDB, musicbrainz and fanart.tv.
+        </description>
+        <license>Apache 2.0</license>
+        <source>https://github.com/marcelveldt/script.module.skin.helper.artutils</source>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.116">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.simplejson" version="3.3.0" />
+        <import addon="script.module.simplecache" version="1.0.0" />
+        <import addon="script.module.skin.helper.artutils" version="1.0.0" />
+	</requires>
+
+    <extension point="kodi.context.item">
+        <menu id="kodi.core.main">
+            <item library="resources\lib\context_animatedart.py">
+              <label>32175</label>
+              <visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + Container.Content(movies)</visible>
+            </item>
+            <item library="resources\lib\context_pvr.py">
+                <label>32120</label>
+                <description>PVR artwork Configuration</description>
+                <visible>
+                    Skin.HasSetting(SkinHelper.EnablePVRThumbs) + 
+                    [Window.IsActive(MyPVRChannels.xml) | 
+                    Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | 
+                    Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
+                </visible>
+            </item>
+            <item library="resources\lib\context_music.py">
+                <label>32122</label>
+                <description>Music artwork Configuration</description>
+                <visible>
+                    Skin.HasSetting(SkinHelper.EnableMusicArt) + 
+                    [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
+                </visible>
+            </item>
+        </menu>
+	</extension>
+
+    <extension library="default.py" point="xbmc.python.library" />
+	<extension library="plugin.py" point="xbmc.python.pluginsource">
+    </extension>
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/marcelveldt/script.skin.helper.service</source>
+	</extension>
+</addon><addon id="resource.uisounds.titan.modern" name="Titan UI Sounds (Modern)" provider-name="marcelveldt,mgonzales" version="1.0.0">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.uisounds" />
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Titan UI Sounds (Modern)</summary>
+    <description lang="en">Titan UI Sounds (Modern)</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="resource.uisounds.titan.classic" name="Titan UI Sounds (Classic)" provider-name="marcelveldt,mgonzales" version="1.0.0">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0" />
+  </requires>
+  <extension point="kodi.resource.uisounds" />
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Titan UI Sounds (Classic)</summary>
+    <description lang="en">Titan UI Sounds (Classic)</description>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" provider-name="marcelveldt" version="1.0.0">
+	<extension compile="false" point="kodi.resource.images" type="skinicons" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Icons Pack - Titan</summary>
+		<description lang="en">Skin Icons Pack - Titan</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="resource.images.skinbackgrounds.titan" name="Skin Backgrounds - Titan" provider-name="marcelveldt" version="1.0.0">
+	<extension compile="false" point="kodi.resource.images" type="skinbackgrounds" />
+	<requires>
+		<import addon="kodi.resource" version="1.0.0" />
+	</requires>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Skin Backgrounds Pack - Titan</summary>
+		<description lang="en">Skin Backgrounds Pack - Titan</description>
+		<platform>all</platform>
+	</extension>
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.12">
+	<requires>
+		<import addon="xbmc.python" version="2.20.0" />
+		<import addon="script.module.simplejson" version="3.3.0" />
+		<import addon="script.module.unidecode" version="0.4.14" />
+	</requires>
+	<extension library="default.py" point="xbmc.python.library" />
+	<extension point="xbmc.addon.metadata">
+		<news>Template improvements and bug fixes</news>
+		<description lang="bg">Добавка за облици, която осигурява просто управление и списък с потребителски преки пътища (изисква поддръжка от облика)</description>
+		<description lang="de">Add-on für Skins für einfache Bearbeitung und Auflistung von benutzerdefinierten Verknüpfungen (erfordert Skin-Unterstützung)</description>
+		<description lang="el">Πρόσθετο για κελύφη, το οποίο παρέχει έναν απλό τρόπο διαχείρισης και κατηγοριοποίησης των συντομεύσεων του χρήστη (πρέπει να υποστηρίζεται από το κέλυφος)</description>
+		<description lang="en">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_NZ">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="en_US">Add-on for skins to provide simple managing and listing of user shortcuts (requires skin support)</description>
+		<description lang="es">Complemento para las pieles para proporcionar una gestión sencilla y lista de atajos de usuario (requiere que la piel lo soporte)</description>
+		<description lang="fr_CA">Addiciel pour habillages qui fournit une gestion simple et un listage des raccourcis utilisateurs (exige la prise en charge de l'habillage)</description>
+		<description lang="gl">Complemento que fornece aos temas dunha xestión sinxela dos atallos dos usuarios (require soporte do tema)</description>
+		<description lang="hr">Dodatak za presvlake koja omogućava jednostavno upravljanje i prikaz korisnikovih prečaca (zahtijeva podršku presvlake) </description>
+		<description lang="hu">Felszín kiegészítő amely könnyen kezelhetővé és listázhatóvá teszi a felhasználói parancsikonokat (Felszín támogatás szükséges)</description>
+		<description lang="is">Viðbót fyrir viðmót til að halda utan um flýtivísa og fá yfirlit yfir þá (þarfnast stuðnings frá viðmóti)</description>
+		<description lang="it">Add-on per gli skin per consentire un facile gestione ed elenco delle scorciatoie utente (richiede che lo skin lo supporti)</description>
+		<description lang="lt">Priedas teminėms išvaizdoms, kad jos turėtų galimybę paprastai tvarkyti ir atvaizduoti vartotojo  sukurtas nuorodas (reikalingas teminės išvaizdos palaikymas)</description>
+		<description lang="nl">Add-on voor skins om te voorzien in het eenvoudig beheren en sorteren van gebruikers snelkoppelingen (vereist skin ondersteuning)</description>
+		<description lang="no">Tillegg for enkel administrering og opplisting av bruker-snarveier i tema (krever støtte i tema)</description>
+		<description lang="pl">Wtyczka dla skór, która zapewnia proste zarządzanie i tworzenie list skrótów użytkownika (wymaga wsparcia skóry)</description>
+		<description lang="pt">Um add-on que permite que os temas tenham recursos simples para gerir e listar atalhos de utilizadores (é necessário suporte do tema)</description>
+		<description lang="pt_BR">Add-on para que as skins possam prover gerenciamento de lista de atalhos para o menu principal (requer suporte da skin)</description>
+		<description lang="ru">Дополнение для обложек, предоставляющее простой способ управления и список пользовательских ярлыков (требуется поддержка обложкой)</description>
+		<description lang="sv">Skinntillägg som tillhandahåller enkel hantering och översikt av användargenvägar (om skinnet stöder det)</description>
+		<description lang="zh">插件为皮肤提供了简单的管理和用户连接方式列表 (需要皮肤支持)</description>
+		<language />
+		<platform>all</platform>
+		<license>GNU General Public License, v2</license>
+		<forum>http://forum.xbmc.org/showthread.php?tid=178294</forum>
+		<website />
+		<email />
+		<source>https://github.com/BigNoid/script.skinshortcuts</source>
+	</extension>
+	<assets>
+		<icon>icon.png</icon>
+		<fanart>fanart.jpg</fanart>
+	</assets>
+</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.1">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <summary>Provides a simple file- and memory based cache for Kodi addons</summary>
+        <description>Provides a simple file- and memory based cache for Kodi addons</description>
+        <license>Apache 2.0</license>
+        <source>https://github.com/marcelveldt/script.module.simplecache</source>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.skin.helper.artutils" version="1.0.0" />
+        <import addon="script.module.simplecache" version="1.0.0" />
+	</requires>
+
+	<extension library="plugin.py" point="xbmc.python.pluginsource">
+        <provides>video audio</provides>
+    </extension>
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Ready to use widgets for all kind of media types</summary>
+        <description />
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
+	</extension>
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.2">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.requests" version="2.3.0" />
+        <import addon="script.module.simplejson" version="3.3.0" />
+        <import addon="script.module.simplecache" version="1.0.0" />
+        <import addon="script.module.arrow" version="0.6.0" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <summary>TheTVDB API v2 python module for Kodi</summary>
+        <description>TheTVDB API v2 python module for Kodi</description>
+        <license>Apache 2.0</license>
+        <source>https://github.com/marcelveldt/script.module.thetvdb</source>
+        <platform>all</platform>
+    </extension>
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+	</requires>
+    <extension library="default.py" point="xbmc.python.script" />
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins</summary>
+        <description>Helper service for Kodi skins</description>
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/marcelveldt/script.skin.helper.service</source>
+	</extension>
+</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" provider-name="marcelveldt" version="1.0.1">
+	<requires>
+		<import addon="xbmc.python" version="2.24.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+		<import addon="script.module.pil" version="1.1.7" />
+	</requires>
+    <extension library="default.py" point="xbmc.python.library" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+        <description>Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
+	</extension>
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+		<import addon="script.module.pil" version="1.1.7" />
+        <import addon="script.module.simplecache" version="1.0.0" />
+        <import addon="script.module.skin.helper.artutils" version="1.0.0" />
+	</requires>
+
+    <extension library="default.py" point="xbmc.python.library" />
+    <extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Helper service for Kodi skins providing rotating backgrounds</summary>
+        <description>Helper service for Kodi skins providing rotating backgrounds</description>
+		<language />
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<website />
+		<source>https://github.com/marcelveldt/script.skin.helper.backgrounds</source>
+	</extension>
+</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.0.22">
+    <requires>
+        <import addon="xbmc.python" version="2.1.0" />
+        <import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.requests" version="2.3.0" />
+        <import addon="script.module.simplejson" version="3.3.0" />
+        <import addon="script.module.six" version="1.9.0" />
+        <import addon="script.module.unidecode" version="0.4.14" />
+    </requires>
+    <extension library="plugin.py" point="xbmc.python.pluginsource">
+		<provides>audio</provides>
+	</extension>
+    <extension library="spotifyservice.py" point="xbmc.python.library" />
+    <extension point="xbmc.addon.metadata">
+        <platform>all</platform>
+        <summary>Unofficial Spotify music plugin for Kodi</summary>
+        <description>Requires a Spotify premium account.</description>
+        <disclaimer>This product uses SPOTIFY(R) CORE but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trade mark of the Spotify Group.</disclaimer>
+    </extension>
+</addon><addon id="script.module.musicbrainz" name="Musicbrainz NGS webservice python bindings" provider-name="marcelveldt" version="0.6.0">
+  <requires>
+  <import addon="xbmc.python" version="2.24.0" />
+  </requires>
+  <extension library="lib" point="xbmc.python.module" />
+  <extension point="xbmc.addon.metadata">
+    <summary>Python bindings for Musicbrainz' NGS webservice</summary>
+    <description>Kodi module library for the Python bindings for Musicbrainz' NGS webservice developed by alastair.</description>
+    <license>GNU GENERAL PUBLIC LICENSE Version 2</license>
+    <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
+    <platform>all</platform>
+  </extension>
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.78">
+	<requires>
+		<import addon="xbmc.gui" version="5.10.0" />		
+		<import addon="script.skinshortcuts" version="0.6.5" />
+		<import addon="script.skin.helper.service" version="1.0.0" />
+        <import addon="script.skin.helper.widgets" version="1.0.0" />
+        <import addon="script.skin.helper.backgrounds" version="1.0.0" />
+        <import addon="resource.uisounds.titan.modern" version="1.0.0" />
+        <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
+        <import addon="resource.images.skinicons.titan" version="1.0.0" />
+	</requires>
+	<extension debugging="false" defaultthemename="Textures.xbt" point="xbmc.gui.skin">		
+		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+		<res aspect="16:10" default="false" folder="1080i" height="1200" width="1920" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Обликът "Titan BETA for Kodi Jarvis" за MediaPortal адаптиран за Kodi, с много добавени функции.</summary>
+		<summary lang="de_DE">MediaPortal's Titan BETA for Kodi Jarvis Skin portiert für Kodi mit jeder Menge neuer Funktionen und einer vollständigen MediaBrowser Integration.</summary>
+		<summary lang="en_AU">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_GB">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_NZ">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_US">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="es_ES">El skin Titan BETA for Kodi Jarvis de MediaPortal, portado a Kodi y enriquecido con muchas funciones.</summary>
+		<summary lang="fr_FR">L'habillage Titan BETA for Kodi Jarvis de MediaPortal adapté à Kodi et enrichi avec de nombreuses fonctionnalités</summary>
+		<summary lang="he_IL">המעטפת Titan BETA for Kodi Jarvis שבמקור נוצרה עבור MediaPortal, שודרגה ביכולות רבות ושילוב מלא של MediaBrowser.</summary>
+		<summary lang="hr_HR">MediaPortal Titan BETA for Kodi Jarvis presvlaka prebačena na Kodi i obogaćena s puno dodatnih mogućnosti.</summary>
+		<summary lang="it_IT">La skin di MediaPortal Titan BETA for Kodi Jarvis arriva su Kodi arricchita con molte feature e piena integrazione di MediaBrowser</summary>
+		<summary lang="lt_LT">MediaPortal'o Titan BETA for Kodi Jarvis teminė išvaizda perkelta į Kodi ir papildyta daugybe funkcijų bei pilna MediaBrowser integracija.</summary>
+		<summary lang="ms_MY">Kulit Titan BETA for Kodi Jarvis MediaPortal diport ke Kodi ditambahbaik dengan pelbagai fitur.</summary>
+		<summary lang="nl_NL">De Titan BETA for Kodi Jarvisskin van MediaPortal is geconverteerd naar Kodi en verrijkt met talloze functionaliteiten</summary>
+		<summary lang="pl_PL">Skóra Titan BETA for Kodi Jarvis przeniesiona z programu MediaPortal do Kodi wzbogacona o dodatkowe funkcje.</summary>
+		<summary lang="pt_BR">A skin Titan BETA for Kodi Jarvis portada do MediaPortal para o Kodi foi enriquecida com várias funcionalidades.</summary>
+		<summary lang="ru_RU">Обложка Titan BETA for Kodi Jarvis была портирована с MediaPortal на Kodi и обзавелась множеством новых возможностей</summary>
+		<summary lang="sr_RS">Titan BETA for Kodi Jarvis маска MediaPortala портована за Kodi обогаћена са доста карактеристика.</summary>
+		<summary lang="sr_RS@latin">Titan BETA for Kodi Jarvis maska MediaPortala portovana za Kodi obogaćena sa dosta karakteristika.</summary>
+		<summary lang="zh_CN">MediaPortal's Titan BETA for Kodi Jarvis 皮肤富含大量的功能。</summary>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/forumdisplay.php?fid=212</forum>
+		<website>http://forum.kodi.tv/forumdisplay.php?fid=212</website>
+		<email />
+		<source />
+	</extension>
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.23">
+	<requires>
+		<import addon="xbmc.gui" version="5.12.0" />		
+		<import addon="script.skinshortcuts" version="0.6.5" />
+		<import addon="script.skin.helper.service" version="1.0.0" />
+        <import addon="script.skin.helper.widgets" version="1.0.0" />
+        <import addon="script.skin.helper.backgrounds" version="1.0.0" />
+        <import addon="resource.uisounds.titan.modern" version="1.0.0" />
+        <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
+        <import addon="resource.images.skinicons.titan" version="1.0.0" />
+	</requires>
+	<extension debugging="false" point="xbmc.gui.skin">		
+		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
+		<res aspect="16:10" default="false" folder="1080i" height="1200" width="1920" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="de">MediaPortal's Titan BETA for Kodi Krypton Skin portiert für Kodi mit jeder Menge Funktionen.</summary>
+		<summary lang="en">MediaPortal's Titan BETA for Kodi Krypton skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="nl">De Titan BETA for Kodi Kryptonskin van MediaPortal is geconverteerd naar Kodi en verrijkt met talloze functionaliteiten</summary>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/forumdisplay.php?fid=212</forum>
+		<website>http://forum.kodi.tv/forumdisplay.php?fid=212</website>
+		<email />
+		<source />
+        <assets>
+            <icon>icon.png</icon>
+            <fanart>fanart.jpg</fanart>
+            <screenshot>_screenshots/screenshot000.jpg</screenshot>
+            <screenshot>_screenshots/screenshot001.jpg</screenshot>
+            <screenshot>_screenshots/screenshot002.jpg</screenshot>
+            <screenshot>_screenshots/screenshot003.jpg</screenshot>
+            <screenshot>_screenshots/screenshot004.jpg</screenshot>
+            <screenshot>_screenshots/screenshot005.jpg</screenshot>
+            <screenshot>_screenshots/screenshot006.jpg</screenshot>
+            <screenshot>_screenshots/screenshot007.jpg</screenshot>
+            <screenshot>_screenshots/screenshot008.jpg</screenshot>
+            <screenshot>_screenshots/screenshot009.jpg</screenshot>
+        </assets>
+        <news>
+            Follow the forum thread about the latest news for the skin.
+            Also have a look at the Trello board to be informed about the skin development:
+            https://trello.com/b/VPlkyvMp/titan-skin
+        </news>
+	</extension>
+</addon></addons>
