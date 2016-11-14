@@ -151,6 +151,7 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
 
     #unzip
     addon_temp = os.path.join(temp_folder,addon_id + alt_addonid)
+    os.path.expanduser(addon_temp)
     os.makedirs(addon_temp)
     do_unzip(temp_file, addon_temp)
     
