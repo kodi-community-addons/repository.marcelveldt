@@ -14,4 +14,4 @@ https://github.com/marcelveldt/script.module.skin.helper.artutils#master
 #https://github.com/marcelveldt/plugin.audio.spotify#master
 #https://github.com/marcelveldt/script.module.musicbrainz#master
 #https://github.com/marcelveldt/skin.titan#master#skin.titan.jarvisbeta#Titan BETA for Kodi Jarvis
-#https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan BETA for Kodi Krypton
+https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan BETA for Kodi Krypton
