@@ -151,7 +151,7 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     
     addon_temp = os.path.join(temp_folder,addon_id + alt_addonid)
     with zipfile.ZipFile(
-            temp_file, compression=zipfile.ZIP_DEFLATED) as archive:
+            temp_file, allowZip64=True) as archive:
         # extract zipfile into temp folder
         for file in archive.namelist():
             print file
