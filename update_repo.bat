@@ -1,4 +1,4 @@
-c:\python27\python.exe update_repo.py --compressed repository.marcelveldt
+c:\python27\python.exe update_repo.py repository.marcelveldt
 
 git add .
 git commit -a -m "update repo"
