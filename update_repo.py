@@ -336,9 +336,9 @@ def fetch_addon_from_zip(raw_addon_location, target_folder):
 
 
 def do_unzip(zip_path, targetdir):
-    print "START UNZIP of file %s  to targetdir %s " %(zipfile, targetdir)
-    f = zipfile.ZipFile(zip_file, 'r')
-    for fileinfo in f.infolist():
+    print "START UNZIP of file %s  to targetdir %s " %(zip_path, targetdir)
+    zip_file = zipfile.ZipFile(zip_path, 'r')
+    for fileinfo in zip_file.infolist():
         filename = fileinfo.filename
         
         if "\\" in filename: 
@@ -354,9 +354,9 @@ def do_unzip(zip_path, targetdir):
             #older python uses utf-8
             outputfile = open(filename.encode("utf-8"), "wb")
         #use shutil to support non-ascii formatted files in the zip
-        shutil.copyfileobj(f.open(fileinfo.filename), outputfile)
+        shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
         outputfile.close()
-    f.close()
+    zip_file.close()
     print "UNZIP DONE of file %s  to path %s " %(zipfile,path)
     
 def fetch_addon(addon_location, target_folder, result_slot, temp_folder):
