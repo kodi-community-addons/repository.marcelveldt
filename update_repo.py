@@ -81,8 +81,7 @@ INFO_BASENAME = 'addon.xml'
 METADATA_BASENAMES = (
     INFO_BASENAME,
     'icon.png',
-    'fanart.jpg',
-    'LICENSE.txt')
+    'fanart.jpg')
 
 
 def get_archive_basename(addon_metadata):
