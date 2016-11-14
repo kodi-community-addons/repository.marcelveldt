@@ -67,6 +67,7 @@ import threading
 import xml.etree.ElementTree
 import zipfile
 import time
+from traceback import format_exc
 
 AddonMetadata = collections.namedtuple(
     'AddonMetadata', ('id', 'version', 'root'))
@@ -256,6 +257,7 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
         os.mkdir(addon_target_folder)
     archive_path = os.path.join(
         addon_target_folder, get_archive_basename(addon_metadata))
+    try:
     with zipfile.ZipFile(
             archive_path, 'w', compression=zipfile.ZIP_DEFLATED) as archive:
         for (root, dirs, files) in os.walk(addon_location.decode("utf-8")):
@@ -266,7 +268,10 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
                 archive.write(
                     os.path.join(root, relative_path.decode("utf-8")),
                     os.path.join(relative_root, relative_path))
-
+    except Exception as exc:
+        print format_exc(sys.exc_info())
+        raise exc
+        
     if not samefile(addon_location, addon_target_folder):
         copy_metadata_files(
             addon_location, addon_target_folder, addon_metadata)
