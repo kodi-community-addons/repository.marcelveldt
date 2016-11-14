@@ -143,17 +143,18 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     download_url = git_location + "/archive/%s.zip" % git_branch
     addon_id = git_location.split("/")[-1]
         
-    temp_file = os.path.join(temp_folder, addon_id + ".zip")    
+    zip_file = os.path.join(temp_folder, addon_id + ".zip")
+    zip_file = os.path.expanduser(zip_file)    
     
     #download zip file for addon
     import urllib
-    urllib.urlretrieve (download_url, temp_file)
+    urllib.urlretrieve (download_url, zip_file)
 
     #unzip
     addon_temp = os.path.join(temp_folder,addon_id + alt_addonid)
-    os.path.expanduser(addon_temp)
+    addon_temp = os.path.expanduser(addon_temp)
     os.makedirs(addon_temp)
-    do_unzip(temp_file, addon_temp)
+    do_unzip(zip_file, addon_temp)
     
     #if alt addonid is given, change the addonid (used for beta skin versions)
     if alt_addonid and alt_addonname:
