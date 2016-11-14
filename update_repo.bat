@@ -1,5 +1,5 @@
 c:\python27\python.exe create_repository.py --compressed ^
-"repository.marcelveldt/" ^
+repository.marcelveldt ^
 "https://github.com/marcelveldt/script.module.skin.helper.artutils#master" ^
 "https://github.com/marcelveldt/script.skin.helper.service#master" ^
 "https://github.com/marcelveldt/resource.uisounds.titan.modern#master" ^
@@ -16,8 +16,8 @@ c:\python27\python.exe create_repository.py --compressed ^
 "https://github.com/marcelveldt/skin.titan#master#skin.titan.jarvisbeta#Titan BETA for Kodi Jarvis" ^
 "https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan BETA for Kodi Krypton"
 
-git add .
-git commit -a -m "update repo"
-git push
+REM git add .
+REM git commit -a -m "update repo"
+REM git push
 
 pause
