@@ -342,9 +342,9 @@ def do_unzip(zip_path, targetdir):
         filename = fileinfo.filename
         
         if "\\" in filename: 
-            os.path.makedirs(os.path.join(targetdir, filename.rsplit("\\", 1)[0]))
+            os.makedirs(os.path.join(targetdir, filename.rsplit("\\", 1)[0]))
         else: 
-            os.path.makedirs(os.path.join(targetdir, filename.rsplit("/", 1)[0]))
+            os.makedirs(os.path.join(targetdir, filename.rsplit("/", 1)[0]))
         filename = os.path.join(targetdir, filename)
         print "unzipping %s" % filename
         try:
