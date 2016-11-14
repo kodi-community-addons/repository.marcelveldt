@@ -360,7 +360,7 @@ def do_unzip(zip_path, targetdir):
             shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
             outputfile.close()
     zip_file.close()
-    print "UNZIP DONE of file %s  to path %s " %(zipfile,path)
+    print "UNZIP DONE of file %s" %(zipfile)
     
 def fetch_addon(addon_location, target_folder, result_slot, temp_folder):
     try:
