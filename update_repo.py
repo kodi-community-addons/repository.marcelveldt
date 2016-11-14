@@ -68,6 +68,7 @@ import xml.etree.ElementTree
 import zipfile
 import time
 from traceback import format_exc
+import subprocess
 
 AddonMetadata = collections.namedtuple(
     'AddonMetadata', ('id', 'version', 'root'))
@@ -265,9 +266,10 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
                     addon_metadata.id,
                     os.path.relpath(root, addon_location))
                 for relative_path in files:
-                    archive.write(
-                        os.path.join(root, relative_path.decode("utf-8")),
-                        os.path.join(relative_root, relative_path))
+                    sourcefile = os.path.join(root, relative_path)
+                    destfile = os.path.join(relative_root, relative_path)
+                    archive.write(sourcefile, destfile)
+
     except Exception as exc:
         print format_exc(sys.exc_info())
         raise exc
@@ -289,7 +291,6 @@ def buildskintextures(addon_folder):
         shutil.move(media_dir, os.path.join(themes_dir, "Textures"))
         #recreate empty media dir
         os.makedirs(media_dir)
-        import subprocess
         for item in os.listdir(themes_dir):
             themedir = os.path.join(themes_dir, item)
             if os.path.isdir(themedir):
@@ -386,6 +387,14 @@ def get_addon_worker(addon_location, target_folder, temp_folder):
         addon_location, target_folder, result_slot, temp_folder))
     return AddonWorker(thread, result_slot)
 
+def cleanup_dir(dirname):
+    #cleanup directory from disk
+    cmdargs = '/c rd /s /q %s' % dirname
+    subprocess.Popen( ('cmd', cmdargs )).wait()
+    while os.path.isdir(dirname):
+        print "wait for folder deletion"
+        time.sleep(1)
+
     
 def create_repository(
         addon_locations,
@@ -409,9 +418,9 @@ def create_repository(
     # create temp folder
     #data_path = os.path.expanduser(args.datadir)
    
-    temp_folder = os.path.join(target_folder, "temp")
+    temp_folder = os.path.abspath(os.path.join(target_folder, "temp"))
     cleanup_dir(temp_folder)
-    if not os.path.exists(temp_folder):
+    if not os.path.isdir(temp_folder):
         os.makedirs(temp_folder)
 
     # Fetch all the add-on sources in parallel.
@@ -457,19 +466,6 @@ def create_repository(
         
     #cleanup temp files
     cleanup_dir(temp_folder)
-
-def cleanup_dir(directory):
-    #cleanup directory from disk
-    success = False
-    while not success:
-        try:
-            if os.path.isdir(directory):
-                shutil.rmtree(directory, ignore_errors=False)
-            success = True
-        except Exception as exc:
-            print exc
-            time.sleep(0.5)
-    
 
 def main():
     parser = argparse.ArgumentParser(
