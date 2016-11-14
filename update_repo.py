@@ -238,6 +238,13 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
     addon_metadata = parse_metadata(metadata_path)
     addon_target_folder = os.path.join(target_folder, addon_metadata.id)
     
+    if os.path.isdir(addon_target_folder):
+        #check current version
+        cur_metadata = parse_metadata(os.path.join(addon_target_folder, INFO_BASENAME))
+        if cur_metadata.version == addon_metadata.version:
+            print "Addon %s already has version %s on the repo, skipping..." % (addon_metadata.id, addon_metadata.version)
+            return cur_metadata
+    
     #if skin addon, build textures...
     if addon_metadata.id.startswith("skin."):
         buildskintextures(raw_addon_location)
