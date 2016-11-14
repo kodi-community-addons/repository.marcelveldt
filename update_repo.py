@@ -339,11 +339,19 @@ def fetch_addon_from_zip(raw_addon_location, target_folder):
 
     return addon_metadata
 
-
+def do_unzip_old(zip_path, targetdir):
+    with zipfile.ZipFile(
+            temp_file, allowZip64=True) as archive:
+        # extract zipfile into temp folder
+        for file in archive.namelist():
+            archive.extract(file, addon_temp)
+    
 def do_unzip(zip_path, targetdir):
     zip_file = zipfile.ZipFile(zip_path, 'r', allowZip64=True)
     for fileinfo in zip_file.infolist():
-        filename = fileinfo.filename
+        #filename = fileinfo.filename
+        filename = unicode(fileinfo.filename, "cp437").encode("utf8")
+        print filename
         if not filename.endswith("/"):
             cur_path = os.path.join(targetdir, filename)
             basedir = os.path.dirname(cur_path)
