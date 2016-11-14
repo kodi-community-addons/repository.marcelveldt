@@ -155,10 +155,10 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     addon_temp = os.path.abspath(addon_temp)
     os.makedirs(addon_temp)
     do_unzip(zip_file, addon_temp)
+    addon_temp = os.path.join(addon_temp, "%s-%s" %(addon_id, git_branch) )
     
     #if alt addonid is given, change the addonid (used for beta skin versions)
     if alt_addonid and alt_addonname:
-        addon_temp = os.path.join(addon_temp, "%s-%s" %(addon_id, git_branch) )
         addon_file = os.path.join(addon_temp, "addon.xml")
         f = open(addon_file,'r')
         filedata = f.read()
