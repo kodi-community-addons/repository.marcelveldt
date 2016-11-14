@@ -182,66 +182,14 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     
     return addon_metadata
 
-def fetch_addon_from_git_old(addon_location, target_folder):
-    # Parse the format "REPOSITORY_URL#BRANCH:PATH". The colon is a delimiter
-    # unless it looks more like a scheme, (e.g., "http://").
-    match = re.match(
-        '((?:[A-Za-z0-9+.-]+://)?.*?)(?:#([^#]*?))?(?::([^:]*))?$',
-        addon_location)
-    (clone_repo, clone_branch, clone_path) = match.group(1, 2, 3)
-
-    # Create a temporary folder for the git clone.
-    #clone_folder = tempfile.mkdtemp('repo-')
-    temp_folder = r'c:\workdir\repository.marcelveldt\temp'
-    if not os.path.exists(temp_folder):
-        os.makedirs(temp_folder)
-    try:
-
-        # Check out the sources.
-        cloned = git.Repo.clone_from(clone_repo, temp_folder)
-        if clone_branch is not None:
-            cloned.git.checkout(clone_branch)
-        clone_source_folder = os.path.join(temp_folder, clone_path or '.')
-
-        metadata_path = os.path.join(clone_source_folder, INFO_BASENAME)
-        addon_metadata = parse_metadata(metadata_path)
-        addon_target_folder = os.path.join(target_folder, addon_metadata.id)
-
-        # Create the compressed add-on archive.
-        if not os.path.isdir(addon_target_folder):
-            os.mkdir(addon_target_folder)
-        archive_path = os.path.join(
-            addon_target_folder, get_archive_basename(addon_metadata))
-        with open(archive_path, 'wb') as archive:
-            cloned.archive(
-                archive,
-                treeish='HEAD:{}'.format(clone_path),
-                prefix='{}/'.format(addon_metadata.id),
-                format='zip')
-
-        copy_metadata_files(
-            clone_source_folder, addon_target_folder, addon_metadata)
-
-        return addon_metadata
-    except Exception as exc:
-        print sys.exc_info()
-        raise exc
-    finally:
-        import subprocess
-        import time
-        #subprocess.call(('cmd', ' /c rmdir /S /Q "{}"'.format(temp_folder) ))
-        #shutil.rmtree(temp_folder, ignore_errors=False)
-        os.system('rmdir /S /Q "{}"'.format(temp_folder))
-        time.sleep(3)
-        pass
-       
+   
 def fetch_addon_from_folder(raw_addon_location, target_folder):
     addon_location = os.path.expanduser(raw_addon_location)
     metadata_path = os.path.join(addon_location, INFO_BASENAME)
     addon_metadata = parse_metadata(metadata_path)
     addon_target_folder = os.path.join(target_folder, addon_metadata.id)
     
-    if os.path.isdir(addon_target_folder):
+    if os.path.exists(metadata_path):
         #check current version
         cur_metadata = parse_metadata(os.path.join(addon_target_folder, INFO_BASENAME))
         if cur_metadata.version == addon_metadata.version:
