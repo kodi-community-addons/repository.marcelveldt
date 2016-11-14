@@ -190,9 +190,10 @@ def fetch_addon_from_folder(raw_addon_location, target_folder):
         addon_metadata = parse_metadata(metadata_path)
         addon_target_folder = os.path.join(target_folder, addon_metadata.id)
         
-        if os.path.exists(metadata_path):
-            #check current version
-            cur_metadata = parse_metadata(os.path.join(addon_target_folder, INFO_BASENAME))
+        #check current version
+        cur_metadata_path = os.path.join(addon_target_folder, INFO_BASENAME)
+        if os.path.exists(cur_metadata_path):
+            cur_metadata = parse_metadata(cur_metadata_path)
             if cur_metadata.version == addon_metadata.version:
                 print "Addon %s already has version %s on the repo, skipping..." % (addon_metadata.id, addon_metadata.version)
                 return cur_metadata
