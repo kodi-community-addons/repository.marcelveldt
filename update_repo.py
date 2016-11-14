@@ -470,7 +470,8 @@ def main():
     if os.path.exists("addonslist.txt"):
         with open("addonslist.txt") as f:
             for line in f.readlines():
-                args.addon.append(line.strip('\n').strip('\t'))
+                if not line.startswith("#"):
+                    args.addon.append(line.strip('\n').strip('\t'))
 
     data_path = os.path.expanduser(args.datadir)
     if args.info is None:
