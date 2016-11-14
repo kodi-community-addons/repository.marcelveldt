@@ -344,7 +344,8 @@ def do_unzip(zip_path, targetdir):
         filename = fileinfo.filename
         basedir = os.path.dirname(os.path.join(targetdir, filename))
         print basedir
-        os.makedirs(basedir)
+        if not os.path.isdir(basedir):
+            os.makedirs(basedir)
         filename = os.path.join(targetdir, filename)
         print "unzipping %s" % filename
         try:
