@@ -343,7 +343,7 @@ def do_unzip(zip_path, targetdir):
     zip_file = zipfile.ZipFile(zip_path, 'r', allowZip64=True)
     for fileinfo in zip_file.infolist():
         #filename = fileinfo.filename
-        filename = unicode(fileinfo.filename, "cp437").encode("utf8")
+        filename = fileinfo.filename.encode("utf8")
         if not filename.endswith("/"):
             cur_path = os.path.join(targetdir, filename)
             basedir = os.path.dirname(cur_path)
