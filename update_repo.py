@@ -342,7 +342,7 @@ def do_unzip(zip_path, targetdir):
     zip_file = zipfile.ZipFile(zip_path, 'r')
     for fileinfo in zip_file.infolist():
         filename = fileinfo.filename
-        if not filename.endswith("\\"):
+        if not filename.endswith("/"):
             cur_path = os.path.join(targetdir, filename)
             basedir = os.path.dirname(cur_path)
             print basedir
