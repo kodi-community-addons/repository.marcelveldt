@@ -143,7 +143,7 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     download_url = git_location + "/archive/%s.zip" % git_branch
     addon_id = git_location.split("/")[-1]
         
-    zip_file = os.path.join(temp_folder, addon_id + ".zip")
+    zip_file = os.path.join(temp_folder, "%s%s.zip" %(addon_id,alt_addonid))
     zip_file = os.path.abspath(zip_file)    
     
     #download zip file for addon
@@ -152,7 +152,6 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     with open(zip_file, 'wb') as out_file:
         shutil.copyfileobj(response.raw, out_file)
     del response
-    
 
     #unzip
     addon_temp = os.path.join(temp_folder,addon_id + alt_addonid)
