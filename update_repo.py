@@ -184,7 +184,7 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
 
    
 def fetch_addon_from_folder(raw_addon_location, target_folder):
-    addon_location = os.path.expanduser(raw_addon_location)
+    addon_location = os.path.abspath(raw_addon_location)
     metadata_path = os.path.join(addon_location, INFO_BASENAME)
     addon_metadata = parse_metadata(metadata_path)
     addon_target_folder = os.path.join(target_folder, addon_metadata.id)
@@ -251,7 +251,7 @@ def samefile(file1, file2):
     return os.stat(file1) == os.stat(file2)
 
 def fetch_addon_from_zip(raw_addon_location, target_folder):
-    addon_location = os.path.expanduser(raw_addon_location)
+    addon_location = os.path.abspath(raw_addon_location)
     with zipfile.ZipFile(
             addon_location, compression=zipfile.ZIP_DEFLATED) as archive:
         # Find out the name of the archive's root folder.
@@ -363,7 +363,7 @@ def create_repository(
         os.mkdir(target_folder)
         
     # create temp folder
-    #data_path = os.path.expanduser(args.datadir)
+    #data_path = os.path.abspath(args.datadir)
    
     temp_folder = os.path.abspath(os.path.join(target_folder, "temp"))
     cleanup_dir(temp_folder)
@@ -452,7 +452,7 @@ def main():
                 if not line.startswith("#"):
                     args.addon.append(line.strip('\n').strip('\t'))
 
-    data_path = os.path.expanduser(args.datadir)
+    data_path = os.path.abspath(args.datadir)
     if args.info is None:
         if args.compressed:
             info_basename = 'addons.xml.gz'
@@ -460,10 +460,10 @@ def main():
             info_basename = 'addons.xml'
         info_path = os.path.join(data_path, info_basename)
     else:
-        info_path = os.path.expanduser(args.info)
+        info_path = os.path.abspath(args.info)
 
     checksum_path = (
-        os.path.expanduser(args.checksum) if args.checksum is not None
+        os.path.abspath(args.checksum) if args.checksum is not None
         else os.path.join(data_path, 'addons.xml.md5'))
     create_repository(
         args.addon, data_path, info_path, checksum_path, args.compressed)
