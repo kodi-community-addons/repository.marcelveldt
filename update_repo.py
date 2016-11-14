@@ -349,13 +349,8 @@ def do_unzip(zip_path, targetdir):
             basedir = os.path.dirname(cur_path)
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-            try:
-                #newer python uses unicode
-                outputfile = open(cur_path, "wb")
-            except Exception:
-                #older python uses utf-8
-                outputfile = open(cur_path.encode("utf-8"), "wb")
             #use shutil to support non-ascii formatted files in the zip
+            outputfile = open(cur_path, "wb")
             shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
             outputfile.close()
     zip_file.close()
