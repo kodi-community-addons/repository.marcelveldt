@@ -150,14 +150,10 @@ def fetch_addon_from_git(addon_location, target_folder, temp_folder):
     urllib.urlretrieve (download_url, temp_file)
     
     addon_temp = os.path.join(temp_folder,addon_id + alt_addonid)
-    with zipfile.ZipFile(
-            temp_file, allowZip64=True) as archive:
-        # extract zipfile into temp folder
-        for file in archive.namelist():
-            print file
-            archive.extract(file, addon_temp)
-            
+    
+    #unzip
     addon_temp = os.path.join(addon_temp, "%s-%s" %(addon_id, git_branch) )
+    do_unzip(temp_file, addon_temp)
     
     #if alt addonid is given, change the addonid (used for beta skin versions)
     if alt_addonid and alt_addonname:
@@ -339,6 +335,30 @@ def fetch_addon_from_zip(raw_addon_location, target_folder):
     return addon_metadata
 
 
+def do_unzip(zip_path, targetdir):
+    print "START UNZIP of file %s  to targetdir %s " %(zipfile, targetdir)
+    f = zipfile.ZipFile(zip_file, 'r')
+    for fileinfo in f.infolist():
+        filename = fileinfo.filename
+        
+        if "\\" in filename: 
+            os.path.makedirs(os.path.join(targetdir, filename.rsplit("\\", 1)[0]))
+        else: 
+            os.path.makedirs(os.path.join(targetdir, filename.rsplit("/", 1)[0]))
+        filename = os.path.join(targetdir, filename)
+        print "unzipping %s" % filename
+        try:
+            #newer python uses unicode
+            outputfile = open(filename, "wb")
+        except Exception:
+            #older python uses utf-8
+            outputfile = open(filename.encode("utf-8"), "wb")
+        #use shutil to support non-ascii formatted files in the zip
+        shutil.copyfileobj(f.open(fileinfo.filename), outputfile)
+        outputfile.close()
+    f.close()
+    print "UNZIP DONE of file %s  to path %s " %(zipfile,path)
+    
 def fetch_addon(addon_location, target_folder, result_slot, temp_folder):
     try:
         print "Processing %s" %addon_location
