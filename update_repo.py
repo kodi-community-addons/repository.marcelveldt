@@ -338,26 +338,25 @@ def fetch_addon_from_zip(raw_addon_location, target_folder):
 
 
 def do_unzip(zip_path, targetdir):
-    print "START UNZIP of file %s  to targetdir %s " %(zip_path, targetdir)
     zip_file = zipfile.ZipFile(zip_path, 'r')
     for fileinfo in zip_file.infolist():
         filename = fileinfo.filename
         if not filename.endswith("/"):
             cur_path = os.path.join(targetdir, filename)
             basedir = os.path.dirname(cur_path)
-            print basedir
             if not os.path.isdir(basedir):
                 os.makedirs(basedir)
-            filename = os.path.join(targetdir, filename)
-            print "unzipping %s" % filename
             try:
                 #newer python uses unicode
-                outputfile = open(filename, "wb")
+                outputfile = open(cur_path, "wb")
             except Exception:
                 #older python uses utf-8
-                outputfile = open(filename.encode("utf-8"), "wb")
+                outputfile = open(cur_path.encode("utf-8"), "wb")
             #use shutil to support non-ascii formatted files in the zip
-            shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
+            try:
+                shutil.copyfileobj(zip_file.open(fileinfo.filename), outputfile)
+            except Exception as exc:
+                print exc
             outputfile.close()
     zip_file.close()
     print "UNZIP DONE of file %s" %(zipfile)
