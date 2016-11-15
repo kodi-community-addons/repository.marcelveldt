@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="resource.skinthemes.titan" version="1.0.0" name="Titan skin Themes" provider-name="marcelveldt">
+  <requires>
+    <import addon="kodi.resource" version="1.0.0"/>
+  </requires>
+  <extension point="kodi.resource"/>
+  <extension point="kodi.addon.metadata">
+    <summary lang="en">Additional skin themes for the Titan skin</summary>
+    <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
+    <platform>all</platform>
+  </extension>
+</addon>
