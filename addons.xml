@@ -293,7 +293,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.backgrounds</source>
 	</extension>
-</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.0.22">
+</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.0.23">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="xbmc.addon" version="12.0.0" />
@@ -301,6 +301,7 @@
         <import addon="script.module.simplejson" version="3.3.0" />
         <import addon="script.module.six" version="1.9.0" />
         <import addon="script.module.unidecode" version="0.4.14" />
+        <import addon="script.module.oauthhelper" version="0.0.7" />
     </requires>
     <extension library="plugin.py" point="xbmc.python.pluginsource">
 		<provides>audio</provides>
