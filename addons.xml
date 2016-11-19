@@ -133,11 +133,11 @@
 		<description lang="en">Animated Busy Spinners Pack - Titan</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="resource.skinthemes.titan" name="Titan skin Themes" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="resource.skinthemes.titan" name="Titan skin Themes" provider-name="marcelveldt" version="1.0.1">
   <requires>
     <import addon="kodi.resource" version="1.0.0" />
   </requires>
-  <extension point="kodi.resource" />
+  <extension compile="false" point="kodi.resource.images" type="skinthemes" />
   <extension point="kodi.addon.metadata">
     <summary lang="en">Additional skin themes for the Titan skin</summary>
     <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
