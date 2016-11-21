@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.1">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -32,7 +32,7 @@
         <source>https://github.com/marcelveldt/script.module.skin.helper.artutils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.116">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.117">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -44,11 +44,11 @@
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources\lib\context_animatedart.py">
-              <label>32175</label>
+              <label>32024</label>
               <visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + Container.Content(movies)</visible>
             </item>
             <item library="resources\lib\context_pvr.py">
-                <label>32120</label>
+                <label>32023</label>
                 <description>PVR artwork Configuration</description>
                 <visible>
                     Skin.HasSetting(SkinHelper.EnablePVRThumbs) + 
@@ -58,7 +58,7 @@
                 </visible>
             </item>
             <item library="resources\lib\context_music.py">
-                <label>32122</label>
+                <label>32023</label>
                 <description>Music artwork Configuration</description>
                 <visible>
                     Skin.HasSetting(SkinHelper.EnableMusicArt) + 
@@ -186,7 +186,7 @@
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
 	</assets>
-</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.1">
+</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.2">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
     </requires>
@@ -198,7 +198,7 @@
         <source>https://github.com/marcelveldt/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.2">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -220,7 +220,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.2">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.3">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -236,7 +236,7 @@
         <source>https://github.com/marcelveldt/script.module.thetvdb</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.2">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -252,9 +252,9 @@
 		<license>GPL v2.0</license>
 		<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
 		<website />
-		<source>https://github.com/marcelveldt/script.skin.helper.service</source>
+		<source>https://github.com/marcelveldt/script.skin.helper.skinbackup</source>
 	</extension>
-</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" provider-name="marcelveldt" version="1.0.1">
+</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" provider-name="marcelveldt" version="1.0.3">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -271,7 +271,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.1">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -324,7 +324,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.90">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.91">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -334,6 +334,7 @@
         <import addon="resource.uisounds.titan.modern" version="1.0.0" />
         <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
         <import addon="resource.images.skinicons.titan" version="1.0.0" />
+        <import addon="resource.skinthemes.titan" version="1.0.1" />
 	</requires>
 	<extension debugging="false" defaultthemename="Textures.xbt" point="xbmc.gui.skin">		
 		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
@@ -367,7 +368,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.30">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.31">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
