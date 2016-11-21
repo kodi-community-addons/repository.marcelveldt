@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<addons><addon id="repository.marcelveldt" name="Marcelveldt's BETA repository" provider-name="marcelveldt" version="1.0.0">
+<addons><addon id="repository.marcelveldt" name="Marcelveldt's BETA repository" provider-name="marcelveldt" version="1.0.1">
 	
 	<extension name="Marcelveldt's BETA repository" point="xbmc.addon.repository">
 		<info compressed="false">https://raw.githubusercontent.com/marcelveldt/repository.marcelveldt/master/addons.xml</info>
