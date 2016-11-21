@@ -236,7 +236,7 @@
         <source>https://github.com/marcelveldt/script.module.thetvdb</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.2">
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.3">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -368,7 +368,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.31">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.32">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -378,6 +378,7 @@
         <import addon="resource.uisounds.titan.modern" version="1.0.0" />
         <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
         <import addon="resource.images.skinicons.titan" version="1.0.0" />
+        <import addon="resource.skinthemes.titan" version="1.0.1" />
 	</requires>
 	<extension debugging="false" point="xbmc.gui.skin">		
 		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
