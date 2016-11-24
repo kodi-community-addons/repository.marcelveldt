@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon
 	id="skin.titan.jarvisbeta"
-	version="3.6.92"
+	version="3.6.93"
 	name="Titan BETA for Kodi Jarvis"
 	provider-name="marcelveldt,mgonzales">
 	<requires>
@@ -13,6 +13,7 @@
         <import addon="resource.uisounds.titan.modern" version="1.0.0"/>
         <import addon="resource.images.skinbackgrounds.titan" version="1.0.0"/>
         <import addon="resource.images.skinicons.titan" version="1.0.0"/>
+        <import addon="resource.images.backgroundoverlays.titan" version="1.0.0"/>
         <import addon="resource.skinthemes.titan" version="1.0.1"/>
 	</requires>
 	<extension
