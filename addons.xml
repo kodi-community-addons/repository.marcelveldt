@@ -186,7 +186,7 @@
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
 	</assets>
-</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.6">
+</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.7">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
     </requires>
