@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.8">
+</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.9">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -32,7 +32,7 @@
         <source>https://github.com/marcelveldt/script.module.skin.helper.artutils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.124">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.125">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -45,13 +45,13 @@
         <menu id="kodi.core.main">
             <item library="resources\lib\context_animatedart.py">
               <label>32024</label>
-              <visible>Skin.HasSetting(SkinHelper.EnableAnimatedPosters) + Container.Content(movies)</visible>
+              <visible>!IsEmpty(Window(Home).Property(SkinHelper.EnableAnimatedPosters)) + Container.Content(movies)</visible>
             </item>
             <item library="resources\lib\context_pvr.py">
                 <label>32023</label>
                 <description>PVR artwork Configuration</description>
                 <visible>
-                    Skin.HasSetting(SkinHelper.EnablePVRThumbs) + 
+                    !IsEmpty(Window(Home).Property(SkinHelper.EnablePvrThumbs)) + 
                     [Window.IsActive(MyPVRChannels.xml) | 
                     Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | 
                     Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
@@ -61,7 +61,7 @@
                 <label>32023</label>
                 <description>Music artwork Configuration</description>
                 <visible>
-                    Skin.HasSetting(SkinHelper.EnableMusicArt) + 
+                    !IsEmpty(Window(Home).Property(SkinHelper.EnableMusicArt)) + 
                     [Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
                 </visible>
             </item>
@@ -143,7 +143,7 @@
     <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
     <platform>all</platform>
   </extension>
-</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.14">
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.15">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="script.module.simplejson" version="3.3.0" />
@@ -198,7 +198,7 @@
         <source>https://github.com/marcelveldt/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.6">
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.7">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -236,7 +236,7 @@
         <source>https://github.com/marcelveldt/script.module.thetvdb</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.7">
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.8">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -271,7 +271,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.4">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.5">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -324,7 +324,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.95">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.96">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -369,7 +369,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.35">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.36">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
