@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.21">
+</addon><addon id="script.module.skin.helper.artutils" name="Skin Helper Artwork and metadata Module" provider-name="marcelveldt" version="1.0.22">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
