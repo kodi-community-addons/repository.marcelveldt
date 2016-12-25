@@ -254,7 +254,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.skinbackup</source>
 	</extension>
-</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" provider-name="marcelveldt" version="1.0.4">
+</addon><addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" provider-name="marcelveldt" version="1.0.5">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -271,7 +271,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.9">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.10">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -324,7 +324,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.101">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.102">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
