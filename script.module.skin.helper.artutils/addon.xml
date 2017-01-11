@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.skin.helper.artutils"
        name="Skin Helper Artwork and metadata Module"
-       version="1.0.28"
+       version="1.0.29"
        provider-name="marcelveldt">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
