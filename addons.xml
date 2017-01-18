@@ -324,7 +324,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.107">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.108">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
