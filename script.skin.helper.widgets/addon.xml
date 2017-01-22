@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.16" provider-name="marcelveldt">
+	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.17" provider-name="marcelveldt">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0"/>
 		<import addon="xbmc.addon" version="12.0.0"/>
@@ -10,6 +10,7 @@
 	<extension point="xbmc.python.pluginsource" library="plugin.py">
         <provides>video audio</provides>
     </extension>
+    <extension library="service.py" point="xbmc.service" start="login" />
 
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Ready to use widgets for all kind of media types</summary>
