@@ -32,7 +32,7 @@
         <source>https://github.com/marcelveldt/script.module.skin.helper.artutils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.0.146">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.0">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -143,7 +143,7 @@
     <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
     <platform>all</platform>
   </extension>
-</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.15">
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.16">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="script.module.simplejson" version="3.3.0" />
@@ -198,7 +198,7 @@
         <source>https://github.com/marcelveldt/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.19">
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.20">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -221,7 +221,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.14">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.15">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -272,7 +272,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.19">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.20">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -325,7 +325,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.109">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.110">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
