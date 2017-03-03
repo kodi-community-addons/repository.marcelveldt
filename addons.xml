@@ -325,7 +325,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.112">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.113">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -372,7 +372,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.46">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.47">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
