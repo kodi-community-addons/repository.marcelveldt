@@ -103,7 +103,7 @@
     <description lang="en">Titan UI Sounds (Classic)</description>
     <platform>all</platform>
   </extension>
-</addon><addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" provider-name="marcelveldt" version="1.0.2">
+</addon><addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" provider-name="marcelveldt" version="1.0.3">
 	<extension compile="false" point="kodi.resource.images" type="skinicons" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
@@ -325,7 +325,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.115">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.116">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -372,7 +372,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.49">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.50">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />

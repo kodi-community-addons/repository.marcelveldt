@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" version="1.0.2" provider-name="marcelveldt">
+<addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" version="1.0.3" provider-name="marcelveldt">
 	<extension point="kodi.resource.images" compile="false" type="skinicons" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0"/>
