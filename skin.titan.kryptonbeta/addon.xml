@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.titan.kryptonbeta" version="3.7.53" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales">
+<addon id="skin.titan.kryptonbeta" version="3.7.54" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales">
 	<requires>
-		<import version="5.12.0" addon="xbmc.gui"/>		
+		<import version="5.10.0" addon="xbmc.gui"/>		
 		<import addon="script.skinshortcuts" version="0.6.5"/>
 		<import addon="script.skin.helper.service" version="1.0.0"/>
         <import addon="script.skin.helper.widgets" version="1.0.0"/>
         <import addon="script.skin.helper.backgrounds" version="1.0.0"/>
         <import addon="resource.uisounds.titan.modern" version="1.0.0"/>
-        <import addon="resource.images.skinbackgrounds.titan" version="1.0.0"/>
-        <import addon="resource.images.skinicons.titan" version="1.0.0"/>
-        <import addon="resource.images.backgroundoverlays.titan" version="1.0.0"/>
-        <import addon="resource.skinthemes.titan" version="1.0.1"/>
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
+        <import addon="resource.images.skinicons.wide" version="1.0.0"/>
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
 	</requires>
 	<extension point="xbmc.gui.skin" debugging="false">		
 		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />

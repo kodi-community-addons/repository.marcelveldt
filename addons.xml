@@ -103,24 +103,24 @@
     <description lang="en">Titan UI Sounds (Classic)</description>
     <platform>all</platform>
   </extension>
-</addon><addon id="resource.images.skinicons.titan" name="Skin Icons - Titan" provider-name="marcelveldt" version="1.0.3">
+</addon><addon id="resource.images.skinicons.wide" name="Skin Icons - Wide" provider-name="marcelveldt" version="1.0.3">
 	<extension compile="false" point="kodi.resource.images" type="skinicons" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Skin Icons Pack - Titan</summary>
-		<description lang="en">Skin Icons Pack - Titan</description>
+		<summary lang="en">Skin Icons Pack - Wide</summary>
+		<description lang="en">Skin Icons Pack - Wide</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="resource.images.skinbackgrounds.titan" name="Skin Backgrounds - Titan" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="resource.images.skinbackgrounds.titanium" name="Skin Backgrounds - Titanium" provider-name="marcelveldt" version="1.0.0">
 	<extension compile="false" point="kodi.resource.images" type="skinbackgrounds" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
 	</requires>
 	<extension point="xbmc.addon.metadata">
-		<summary lang="en">Skin Backgrounds Pack - Titan</summary>
-		<description lang="en">Skin Backgrounds Pack - Titan</description>
+		<summary lang="en">Skin Backgrounds Pack - Titanium</summary>
+		<description lang="en">Skin Backgrounds Pack - Titanium</description>
 		<platform>all</platform>
 	</extension>
 </addon><addon id="resource.images.busyspinners.titan" name="Animated Busy Spinners Pack - Titan" provider-name="marcelveldt" version="1.0.0">
@@ -133,16 +133,6 @@
 		<description lang="en">Animated Busy Spinners Pack - Titan</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="resource.skinthemes.titan" name="Titan skin Themes" provider-name="marcelveldt" version="1.0.2">
-  <requires>
-    <import addon="kodi.resource" version="1.0.0" />
-  </requires>
-  <extension compile="false" point="kodi.resource.images" type="skinthemes" />
-  <extension point="kodi.addon.metadata">
-    <summary lang="en">Additional skin themes for the Titan skin</summary>
-    <description lang="en">A pack of additional skin themes for the Titan skin, provided by both the author of the skin and community contributions</description>
-    <platform>all</platform>
-  </extension>
 </addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.16">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
@@ -325,7 +315,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.119">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.120">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -333,10 +323,9 @@
         <import addon="script.skin.helper.widgets" version="1.0.0" />
         <import addon="script.skin.helper.backgrounds" version="1.0.0" />
         <import addon="resource.uisounds.titan.modern" version="1.0.0" />
-        <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
-        <import addon="resource.images.skinicons.titan" version="1.0.0" />
-        <import addon="resource.images.backgroundoverlays.titan" version="1.0.0" />
-        <import addon="resource.skinthemes.titan" version="1.0.1" />
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0" />
+        <import addon="resource.images.skinicons.wide" version="1.0.0" />
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0" />
 	</requires>
 	<extension debugging="false" defaultthemename="Textures.xbt" point="xbmc.gui.skin">		
 		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
@@ -372,18 +361,17 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.53">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.54">
 	<requires>
-		<import addon="xbmc.gui" version="5.12.0" />		
+		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
 		<import addon="script.skin.helper.service" version="1.0.0" />
         <import addon="script.skin.helper.widgets" version="1.0.0" />
         <import addon="script.skin.helper.backgrounds" version="1.0.0" />
         <import addon="resource.uisounds.titan.modern" version="1.0.0" />
-        <import addon="resource.images.skinbackgrounds.titan" version="1.0.0" />
-        <import addon="resource.images.skinicons.titan" version="1.0.0" />
-        <import addon="resource.images.backgroundoverlays.titan" version="1.0.0" />
-        <import addon="resource.skinthemes.titan" version="1.0.1" />
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0" />
+        <import addon="resource.images.skinicons.wide" version="1.0.0" />
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0" />
 	</requires>
 	<extension debugging="false" point="xbmc.gui.skin">		
 		<res aspect="16:9" default="true" folder="1080i" height="1080" width="1920" />
@@ -419,7 +407,7 @@
             https://trello.com/b/VPlkyvMp/titan-skin
         </news>
 	</extension>
-</addon><addon id="resource.images.backgroundoverlays.titan" name="Background Overlays Pack - Titan" provider-name="marcelveldt, mgonzales" version="1.0.0">
+</addon><addon id="resource.images.backgroundoverlays.basic" name="Background Overlays Pack - Basic" provider-name="marcelveldt, mgonzales" version="1.0.0">
 	<extension compile="false" point="kodi.resource.images" type="backgroundoverlays" />
 	<requires>
 		<import addon="kodi.resource" version="1.0.0" />
