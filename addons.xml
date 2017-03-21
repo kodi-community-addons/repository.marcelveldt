@@ -133,7 +133,7 @@
 		<description lang="en">Animated Busy Spinners Pack - Titan</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.16">
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.17">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="script.module.simplejson" version="3.3.0" />
@@ -171,11 +171,11 @@
 		<website />
 		<email />
 		<source>https://github.com/BigNoid/script.skinshortcuts</source>
-	</extension>
 	<assets>
 		<icon>icon.png</icon>
 		<fanart>fanart.jpg</fanart>
 	</assets>
+	</extension>
 </addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.12">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
@@ -315,7 +315,7 @@
     <source>https://github.com/marcelveldt/script.module.musicbrainz</source>
     <platform>all</platform>
   </extension>
-</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.120">
+</addon><addon id="skin.titan.jarvisbeta" name="Titan BETA for Kodi Jarvis" provider-name="marcelveldt,mgonzales" version="3.6.121">
 	<requires>
 		<import addon="xbmc.gui" version="5.10.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -361,7 +361,7 @@
 		<email />
 		<source />
 	</extension>
-</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.55">
+</addon><addon id="skin.titan.kryptonbeta" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales" version="3.7.56">
 	<requires>
 		<import addon="xbmc.gui" version="5.12.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
