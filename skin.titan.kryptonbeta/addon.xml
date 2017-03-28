@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.titan.kryptonbeta" version="3.7.57" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales">
+<addon id="skin.titan.kryptonbeta" version="3.7.58" name="Titan BETA for Kodi Krypton" provider-name="marcelveldt,mgonzales">
 	<requires>
 		<import version="5.12.0" addon="xbmc.gui"/>		
 		<import addon="script.skinshortcuts" version="0.6.5"/>
