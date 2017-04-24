@@ -227,7 +227,7 @@
         <source>https://github.com/marcelveldt/script.module.thetvdb</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.16">
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.17">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
