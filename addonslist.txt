@@ -17,3 +17,4 @@ https://github.com/marcelveldt/script.module.musicbrainz#master
 https://github.com/marcelveldt/skin.titan#master#skin.titan.jarvisbeta#Titan BETA for Kodi Jarvis
 https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan BETA for Kodi Krypton
 https://github.com/marcelveldt/resource.images.backgroundoverlays.basic#master
+https://github.com/marcelveldt/service.squeezelite#master

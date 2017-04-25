@@ -262,7 +262,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.28">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.29">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -416,5 +416,26 @@
 		<summary lang="en">Pack of images that can be used as background overlay</summary>
 		<description lang="en">Pack of images that can be used as background overlay</description>
 		<platform>all</platform>
+	</extension>
+</addon><addon id="service.squeezelite" name="Squeezelite Service" provider-name="marcelveldt" version="1.0.0">
+	<requires>
+		<import addon="xbmc.python" version="2.13.0" />
+		<import addon="xbmc.addon" version="12.0.0" />
+        <import addon="script.module.six" version="1.9.0" />
+	</requires>
+	<extension library="plugin.py" point="xbmc.python.pluginsource">
+        <provides>audio</provides>
+    </extension>
+	<extension library="service.py" point="xbmc.service" start="login" />
+
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en">Squeezelite Player for Kodi</summary>
+        <description>Squeezelite Player for Kodi</description>
+		<language />
+		<platform>all</platform>
+		<license>Apache v2.0</license>
+		<forum />
+		<website />
+		<source>https://github.com/marcelveldt/service.squeezelite</source>
 	</extension>
 </addon></addons>
