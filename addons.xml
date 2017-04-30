@@ -417,11 +417,12 @@
 		<description lang="en">Pack of images that can be used as background overlay</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="service.squeezelite" name="Squeezelite Service" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="plugin.audio.squeezebox" name="Squeezebox for Kodi" provider-name="marcelveldt" version="1.0.0">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
         <import addon="script.module.six" version="1.9.0" />
+        <import addon="script.module.requests" version="2.3.0" />
 	</requires>
 	<extension library="plugin.py" point="xbmc.python.pluginsource">
         <provides>audio</provides>
@@ -430,12 +431,12 @@
 
 	<extension point="xbmc.addon.metadata">
 		<summary lang="en">Squeezelite Player for Kodi</summary>
-        <description>Squeezelite Player for Kodi</description>
+        <description>Turn Kodi into a squeezebox player. Playback provided by squeezelite.</description>
 		<language />
 		<platform>all</platform>
 		<license>Apache v2.0</license>
 		<forum />
 		<website />
-		<source>https://github.com/marcelveldt/service.squeezelite</source>
+		<source>https://github.com/marcelveldt/plugin.audio.squeezebox</source>
 	</extension>
 </addon></addons>
