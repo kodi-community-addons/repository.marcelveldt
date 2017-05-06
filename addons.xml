@@ -417,7 +417,7 @@
 		<description lang="en">Pack of images that can be used as background overlay</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="plugin.audio.squeezebox" name="Squeezebox for Kodi" provider-name="marcelveldt" version="1.0.11">
+</addon><addon id="plugin.audio.squeezebox" name="Squeezebox for Kodi" provider-name="marcelveldt" version="1.0.12">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
