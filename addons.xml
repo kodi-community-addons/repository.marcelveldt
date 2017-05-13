@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.7">
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.8">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -26,13 +26,14 @@
         <summary>Metadata and artwork from common sources like TMDB, IMDB, TADB and fanart.tv </summary>
         <description>
             The metadata and artwork module for Kodi provides rich metadata, including artwork for 
-            various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv.
+            various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv.[CR][CR]
+            This product uses the TMDb API but is not endorsed or certified by TMDb
         </description>
         <license>Apache 2.0</license>
         <source>https://github.com/marcelveldt/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.15">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.16">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -176,7 +177,7 @@
 		<fanart>fanart.jpg</fanart>
 	</assets>
 	</extension>
-</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.13">
+</addon><addon id="script.module.simplecache" name="Simple Cache Module" provider-name="marcelveldt" version="1.0.14">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
     </requires>
