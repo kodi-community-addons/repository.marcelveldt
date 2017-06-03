@@ -285,7 +285,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.backgrounds</source>
 	</extension>
-</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.10">
+</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.11">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="xbmc.addon" version="12.0.0" />
