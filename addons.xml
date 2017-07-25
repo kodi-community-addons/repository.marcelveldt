@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.9">
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.10">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -33,13 +33,14 @@
         <source>https://github.com/marcelveldt/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.17">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.18">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
         <import addon="script.module.simplejson" version="3.3.0" />
         <import addon="script.module.simplecache" version="1.0.0" />
         <import addon="script.module.metadatautils" version="1.0.0" />
+        <import addon="script.module.cherrypy" version="11.0.0" />
 	</requires>
 
     <extension point="kodi.context.item">
@@ -263,7 +264,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.29">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.31">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -285,15 +286,14 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.backgrounds</source>
 	</extension>
-</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.37">
+</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.39">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="xbmc.addon" version="12.0.0" />
         <import addon="script.module.requests" version="2.3.0" />
         <import addon="script.module.simplejson" version="3.3.0" />
         <import addon="script.module.simplecache" version="1.0.0" />
-        <import addon="script.module.six" version="1.9.0" />
-        <import addon="script.module.unidecode" version="0.4.14" />
+        <import addon="script.module.cherrypy" version="11.0.0" />
         <import addon="script.module.metadatautils" version="1.0.0" />
     </requires>
     <extension library="plugin.py" point="xbmc.python.pluginsource">
@@ -485,7 +485,7 @@
 		<description lang="en">Pack of images that can be used as background overlay</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="plugin.audio.squeezebox" name="Squeezebox for Kodi" provider-name="marcelveldt" version="1.0.18">
+</addon><addon id="plugin.audio.squeezebox" name="Squeezebox for Kodi" provider-name="marcelveldt" version="1.0.19">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -508,4 +508,20 @@
 		<website />
 		<source>https://github.com/marcelveldt/plugin.audio.squeezebox</source>
 	</extension>
+</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="11.0.0">
+    <requires>
+        <import addon="xbmc.python" version="2.24.0" />
+        <import addon="script.module.six" version="1.9.0" />
+    </requires>
+    <extension library="lib" point="xbmc.python.module" />
+    <extension point="xbmc.addon.metadata">
+        <summary>CherryPy webserver packaged as Kodi module</summary>
+        <description>CherryPy is a pythonic, object-oriented web framework
+            CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.
+            CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.
+        </description>
+        <license>BSD</license>
+        <source>https://github.com/marcelveldt/script.module.cherrypy</source>
+        <platform>all</platform>
+    </extension>
 </addon></addons>

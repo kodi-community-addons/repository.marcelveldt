@@ -19,3 +19,4 @@ https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan B
 https://github.com/marcelveldt/skin.titan#leia#skin.titan.leiabeta#Titan BETA for Kodi Leia
 https://github.com/marcelveldt/resource.images.backgroundoverlays.basic#master
 https://github.com/marcelveldt/plugin.audio.squeezebox#master
+https://github.com/marcelveldt/script.module.cherrypy#master
