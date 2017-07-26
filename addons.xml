@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.10">
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.11">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -33,7 +33,7 @@
         <source>https://github.com/marcelveldt/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.18">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.19">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -190,7 +190,7 @@
         <source>https://github.com/marcelveldt/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.28">
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.29">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -213,7 +213,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.17">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.18">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -264,7 +264,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.31">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.32">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
