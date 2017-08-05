@@ -213,7 +213,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.21">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.22">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -527,7 +527,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/plugin.audio.squeezebox</source>
 	</extension>
-</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="11.0.0">
+</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="11.0.1">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.six" version="1.9.0" />
