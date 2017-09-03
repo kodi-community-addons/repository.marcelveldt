@@ -68,6 +68,7 @@ import xml.etree.ElementTree
 import zipfile
 import time
 from traceback import format_exc
+import platform
 import subprocess
 
 AddonMetadata = collections.namedtuple(
@@ -244,7 +245,10 @@ def buildskintextures(addon_folder):
             if os.path.isdir(themedir):
                 theme_file = os.path.join(media_dir, "%s.xbt" % item)
                 tpargs = '-dupecheck -input %s -output %s' %(themedir, theme_file)
-                subprocess.Popen( ('TexturePacker.exe', tpargs )).wait()
+                if "Windows" in platform.platform():
+                    subprocess.Popen( ('TexturePacker.exe', tpargs )).wait()
+                else:
+                    subprocess.Popen( ('TexturePacker', tpargs )).wait()
         #remove themes dir
         shutil.rmtree(themes_dir, ignore_errors=False)
     
@@ -337,8 +341,14 @@ def get_addon_worker(addon_location, target_folder, temp_folder):
 
 def cleanup_dir(dirname):
     #cleanup directory from disk
-    cmdargs = '/c rd /s /q %s' % dirname
-    subprocess.Popen( ('cmd', cmdargs )).wait()
+    if "Windows" in platform.platform():
+        cmd = 'cmd'
+        cmdargs = '/c rd /s /q %s' % dirname
+    else:
+        cmd = 'rmdir'
+        cmdargs = dirname
+    
+    subprocess.Popen( (cmd, cmdargs )).wait()
     while os.path.isdir(dirname):
         print "wait for folder deletion"
         time.sleep(1)
