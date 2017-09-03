@@ -344,11 +344,11 @@ def cleanup_dir(dirname):
     if "Windows" in platform.platform():
         cmd = 'cmd'
         cmdargs = '/c rd /s /q %s' % dirname
+        subprocess.Popen( (cmd, cmdargs )).wait()
     else:
-        cmd = 'rmdir'
-        cmdargs = dirname
+        cmd = 'rmdir %s' % dirname
+        subprocess.Popen( cmd, shell=True).wait()
     
-    subprocess.Popen( (cmd, cmdargs )).wait()
     while os.path.isdir(dirname):
         print "wait for folder deletion"
         time.sleep(1)
