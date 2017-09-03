@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.15">
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.16">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -190,7 +190,7 @@
         <source>https://github.com/marcelveldt/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.33">
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt" version="1.0.34">
 	<requires>
 		<import addon="xbmc.python" version="2.24.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -429,7 +429,7 @@
             https://trello.com/b/VPlkyvMp/titan-skin
         </news>
 	</extension>
-</addon><addon id="skin.titan.leiabeta" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales" version="3.8.1">
+</addon><addon id="skin.titan.leiabeta" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales" version="3.8.2">
 	<requires>
 		<import addon="xbmc.gui" version="5.13.0" />		
 		<import addon="script.skinshortcuts" version="0.6.5" />
@@ -474,21 +474,21 @@
 		<website>http://forum.kodi.tv/forumdisplay.php?fid=212</website>
 		<email />
 		<source>https://github.com/marcelveldt/skin.titan.leiabeta</source>
-        <assets>
-            <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>_screenshots/screenshot000.jpg</screenshot>
-            <screenshot>_screenshots/screenshot001.jpg</screenshot>
-            <screenshot>_screenshots/screenshot002.jpg</screenshot>
-            <screenshot>_screenshots/screenshot003.jpg</screenshot>
-            <screenshot>_screenshots/screenshot004.jpg</screenshot>
-            <screenshot>_screenshots/screenshot005.jpg</screenshot>
-            <screenshot>_screenshots/screenshot006.jpg</screenshot>
-            <screenshot>_screenshots/screenshot007.jpg</screenshot>
-            <screenshot>_screenshots/screenshot008.jpg</screenshot>
-            <screenshot>_screenshots/screenshot009.jpg</screenshot>
-        </assets>
-        <news>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+			<screenshot>_screenshots/screenshot000.jpg</screenshot>
+			<screenshot>_screenshots/screenshot001.jpg</screenshot>
+			<screenshot>_screenshots/screenshot002.jpg</screenshot>
+			<screenshot>_screenshots/screenshot003.jpg</screenshot>
+			<screenshot>_screenshots/screenshot004.jpg</screenshot>
+			<screenshot>_screenshots/screenshot005.jpg</screenshot>
+			<screenshot>_screenshots/screenshot006.jpg</screenshot>
+			<screenshot>_screenshots/screenshot007.jpg</screenshot>
+			<screenshot>_screenshots/screenshot008.jpg</screenshot>
+			<screenshot>_screenshots/screenshot009.jpg</screenshot>
+		</assets>
+		<news>
             Follow the forum thread about the latest news for the skin.
             Also have a look at the Trello board to be informed about the skin development:
             https://trello.com/b/VPlkyvMp/titan-skin

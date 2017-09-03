@@ -346,7 +346,7 @@ def cleanup_dir(dirname):
         cmdargs = '/c rd /s /q %s' % dirname
         subprocess.Popen( (cmd, cmdargs )).wait()
     else:
-        cmd = 'rmdir %s' % dirname
+        cmd = 'rm -Rf %s' % dirname
         subprocess.Popen( cmd, shell=True).wait()
     
     while os.path.isdir(dirname):
