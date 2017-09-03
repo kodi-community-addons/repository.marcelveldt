@@ -248,7 +248,8 @@ def buildskintextures(addon_folder):
                 if "Windows" in platform.platform():
                     subprocess.Popen( ('TexturePacker.exe', tpargs )).wait()
                 else:
-                    subprocess.Popen( ('./TexturePacker', tpargs )).wait()
+                    cmd = "./TexturePacker %s" % tpargs
+                    subprocess.Popen( cmd).wait()
         #remove themes dir
         shutil.rmtree(themes_dir, ignore_errors=False)
     
