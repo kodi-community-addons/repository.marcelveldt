@@ -249,7 +249,7 @@ def buildskintextures(addon_folder):
                     subprocess.Popen( ('TexturePacker.exe', tpargs )).wait()
                 else:
                     cmd = "./TexturePacker %s" % tpargs
-                    subprocess.Popen( cmd).wait()
+                    subprocess.Popen(cmd, shell=True).wait()
         #remove themes dir
         shutil.rmtree(themes_dir, ignore_errors=False)
     
