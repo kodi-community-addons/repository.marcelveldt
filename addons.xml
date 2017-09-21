@@ -11,7 +11,7 @@
 		<description lang="en">Kodi repository for beta/test versions of Marcelveldt's addons, for stable versions please just use the official Kodi repository. This repo is for test/beta versions of my work only</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.16">
+</addon><addon id="script.module.metadatautils" name="Metadata and Artwork module" provider-name="marcelveldt" version="1.0.17">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -33,7 +33,7 @@
         <source>https://github.com/marcelveldt/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.22">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.23">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
@@ -213,7 +213,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.23">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.25">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.requests" version="2.3.0" />
@@ -286,7 +286,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/script.skin.helper.backgrounds</source>
 	</extension>
-</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.42">
+</addon><addon id="plugin.audio.spotify" name="Spotify" provider-name="marcelveldt" version="1.1.44">
     <requires>
         <import addon="xbmc.python" version="2.1.0" />
         <import addon="xbmc.addon" version="12.0.0" />
