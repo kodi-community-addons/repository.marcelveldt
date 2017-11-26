@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.titan.leiabeta" version="3.8.2" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales">
+<addon id="skin.titan.leiabeta" version="3.8.3" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales">
 	<requires>
 		<import version="5.13.0" addon="xbmc.gui"/>		
 		<import addon="script.skinshortcuts" version="0.6.5"/>
