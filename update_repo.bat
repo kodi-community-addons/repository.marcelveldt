@@ -1,3 +1,5 @@
+git pull
+
 c:\python27\python.exe update_repo.py repository.marcelveldt
 
 git add .

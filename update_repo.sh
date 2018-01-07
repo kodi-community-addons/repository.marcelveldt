@@ -1,3 +1,5 @@
+git pull
+
 python update_repo.py repository.marcelveldt
 
 git add .
