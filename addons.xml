@@ -527,7 +527,7 @@
 		<website />
 		<source>https://github.com/marcelveldt/plugin.audio.squeezebox</source>
 	</extension>
-</addon><addon id="plugin.audio.roon" name="Roon Control for Kodi" provider-name="marcelveldt" version="1.0.0">
+</addon><addon id="plugin.audio.roon" name="Roon Control for Kodi" provider-name="marcelveldt" version="1.0.1">
 	<requires>
 		<import addon="xbmc.python" version="2.13.0" />
 		<import addon="xbmc.addon" version="12.0.0" />
