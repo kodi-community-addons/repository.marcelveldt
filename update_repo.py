@@ -8,47 +8,15 @@ is placed in its own directory. Each contains the add-on metadata files
 and a zip archive. In addition, the repository catalog "addons.xml" is
 placed in the repository folder.
 
-Each add-on location is either a local path or a URL. If it is a local
-path, it can be to either an add-on folder or an add-on ZIP archive. If
-it is a URL, it should be to a Git repository and it should use the
-format:
-    REPOSITORY_URL#BRANCH:PATH
-The first segment is the Git URL that would be used to clone the
-repository, (e.g.,
-"https://github.com/chadparry/kodi-repository.chad.parry.org.git").
-That is followed by an optional "#" sign and a branch or tag name,
-(e.g. "release-1.0"). If no branch name is specified, then the default
-is the repository's currently active branch, which is the same default
-as git-clone. Next comes an optional ":" sign and path. The path
-denotes the location of the add-on within the repository. If no path is
-specified, then the default is ".".
-
-For example, if you are in the directory that should contain addons.xml
-and you just copied a new version of the only add-on
-"repository.chad.parry.org" to a subdirectory, then you can create or
-update the addons.xml file with this command:
-
-    ./create_repository.py repository.chad.parry.org
-
-As another example, here is the command that generates Chad Parry's
-Repository:
-
-    create_repository.py \
-        --datadir=~/html/software/kodi \
-        --compressed \
-        https://github.com/chadparry\
-/kodi-repository.chad.parry.org.git:repository.chad.parry.org \
-        https://github.com/chadparry\
-/kodi-plugin.program.remote.control.browser.git\
-:plugin.program.remote.control.browser
-
 This script has been tested with Python 2.7.6 and Python 3.4.3. It
 depends on the GitPython module.
+
+Based on the original script by Chad Perry <github@chad.parry.org> 
 """
 
-__author__ = "Chad Parry"
-__contact__ = "github@chad.parry.org"
-__copyright__ = "Copyright 2016 Chad Parry"
+__author__ = "Marcel van der Veldt"
+__contact__ = "vanderveldtmarcel@gmail.com"
+__copyright__ = "Copyright 2016 Chad Parry, Copyright 2018 Marcel van der Veldt"
 __license__ = "GNU GENERAL PUBLIC LICENSE. Version 2, June 1991"
 __version__ = "1.2.2"
 
