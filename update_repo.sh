@@ -1,6 +1,6 @@
 git pull
 
-update_repo.py repository.marcelveldt
+./update_repo.py repository.marcelveldt
 
 ./update-directory-structure.py
 
