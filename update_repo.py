@@ -246,9 +246,11 @@ def buildskintextures(addon_folder):
                 theme_file = os.path.join(media_dir, "%s.xbt" % item)
                 tpargs = '-dupecheck -input %s -output %s' %(themedir, theme_file)
                 if "Windows" in platform.platform():
-                    subprocess.Popen( ('TexturePacker.exe', tpargs )).wait()
+                    subprocess.Popen( ('externals/texturepacker/windows/TexturePacker.exe', tpargs )).wait()
+                elif "Darwin" in platform.platform():
+                    subprocess.Popen( ('externals/texturepacker/macos/TexturePacker', tpargs )).wait()
                 else:
-                    cmd = "./TexturePacker %s" % tpargs
+                    cmd = "externals/texturepacker/linux/TexturePacker %s" % tpargs
                     subprocess.Popen(cmd, shell=True).wait()
         #remove themes dir
         shutil.rmtree(themes_dir, ignore_errors=False)
