@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<addon id="skin.titan.leiabeta" version="3.8.3" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales">
+<addon id="skin.titan.leiabeta" version="3.8.4" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales">
 	<requires>
 		<import version="5.13.0" addon="xbmc.gui"/>		
 		<import addon="script.skinshortcuts" version="0.6.5"/>
@@ -27,6 +27,7 @@
 		<summary lang="fr_FR">L'habillage Titan BETA for Kodi Leia de MediaPortal adapté à Kodi et enrichi avec de nombreuses fonctionnalités</summary>
 		<summary lang="he_IL">המעטפת Titan BETA for Kodi Leia שבמקור נוצרה עבור MediaPortal, שודרגה ביכולות רבות ושילוב מלא של MediaBrowser.</summary>
 		<summary lang="hr_HR">MediaPortal Titan BETA for Kodi Leia presvlaka prebačena na Kodi i obogaćena s puno dodatnih mogućnosti.</summary>
+		<summary lang="hu_HU">A MediaPortal Titan BETA for Kodi Leia felszínének Kodi portja rengeteg funkcióval kiegészítve.</summary>
 		<summary lang="it_IT">La skin di MediaPortal Titan BETA for Kodi Leia arriva su Kodi arricchita con molte feature e piena integrazione di MediaBrowser</summary>
 		<summary lang="lt_LT">MediaPortal'o Titan BETA for Kodi Leia teminė išvaizda perkelta į Kodi ir papildyta daugybe funkcijų bei pilna MediaBrowser integracija.</summary>
 		<summary lang="ms_MY">Kulit Titan BETA for Kodi Leia MediaPortal diport ke Kodi ditambahbaik dengan pelbagai fitur.</summary>
