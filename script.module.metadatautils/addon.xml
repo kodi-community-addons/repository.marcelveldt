@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.20"
-       provider-name="marcelveldt, finkleandeinhorn">
+       version="1.0.26"
+       provider-name="marcelveldt, finkleandeinhorn, cartmandos">
     <requires>
         <import addon="xbmc.python" version="2.24.0"/>
         <import addon="script.module.requests" version="2.3.0"/>
@@ -21,7 +21,7 @@
             This product uses the TMDb API but is not endorsed or certified by TMDb
         </description>
         <license>Apache 2.0</license>
-        <source>https://www.github.com/kodi-community-addons/script.module.metadatautils</source>
+        <source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
 </addon>
