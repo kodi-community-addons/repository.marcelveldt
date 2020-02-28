@@ -139,7 +139,7 @@
 		<description lang="en">Animated Busy Spinners Pack - Titan</description>
 		<platform>all</platform>
 	</extension>
-</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.18">
+</addon><addon id="script.skinshortcuts" name="Skin Shortcuts" provider-name="BigNoid,marcelveldt" version="1.0.19">
 	<requires>
 		<import addon="xbmc.python" version="2.20.0" />
 		<import addon="script.module.simplejson" version="3.3.0" />
