@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <addon id="skin.titan.leiabeta" version="3.8.4" name="Titan BETA for Kodi Leia" provider-name="marcelveldt,mgonzales">
 	<requires>
-		<import version="5.13.0" addon="xbmc.gui"/>		
+		<import version="5.14.0" addon="xbmc.gui"/>		
 		<import addon="script.skinshortcuts" version="0.6.5"/>
 		<import addon="script.skin.helper.service" version="1.0.0"/>
         <import addon="script.skin.helper.widgets" version="1.0.0"/>
