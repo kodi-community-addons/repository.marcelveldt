@@ -552,7 +552,7 @@
 		<website />
 		<source>https://github.com/kodi-community-addons/plugin.audio.roon</source>
 	</extension>
-</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="12.0.0">
+</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="12.0.1">
     <requires>
         <import addon="xbmc.python" version="2.24.0" />
         <import addon="script.module.six" version="1.9.0" />
