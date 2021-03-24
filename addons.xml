@@ -14,16 +14,16 @@
 	</extension>
 </addon><addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.37"
-       provider-name="marcelveldt, finkleandeinhorn, cartmandos">
+       version="1.0.38"
+       provider-name="marcelveldt and others">
     <requires>
-        <!-- <import addon="xbmc.python" version="3.0.0"/> -->
-        <import addon="script.module.requests" version="2.3.0"/>
-        <import addon="script.module.beautifulsoup" version="3.0.8"/>
-        <import addon="script.module.thetvdb" version="0.0.1"/>
-        <import addon="script.module.musicbrainz" version="0.0.1"/>
-        <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.arrow" version="0.6.0"/>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.9.1"/>
+        <import addon="script.module.beautifulsoup4" version="4.9.3" />
+        <import addon="script.module.thetvdb" version="1.0.29" />
+        <import addon="script.module.musicbrainz" version="0.7.0"/>
+        <import addon="script.module.simplecache" version="2.0.2"/>
+        <import addon="script.module.arrow" version="0.15.5"/>
     </requires>
     <extension point="xbmc.python.module" library="lib" />
     <extension point="xbmc.addon.metadata">
@@ -37,16 +37,15 @@
         <source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.31">
+</addon><addon id="script.skin.helper.service" name="Skin Helper Service" provider-name="marcelveldt" version="1.1.33">
     <requires>
-	<!-- <import addon="xbmc.python" version="3.0.0"/> -->
+		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
         <import addon="script.module.simplejson" version="3.3.0"/>
         <import addon="script.module.simplecache" version="1.0.0"/>
-        <import addon="script.module.metadatautils" version="1.0.0"/>
-        <import addon="script.module.cherrypy" version="11.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.31"/>
+        <import addon="script.module.cherrypy" version="11.0.1"/>
     </requires>
-
     <extension point="kodi.context.item">
         <menu id="kodi.core.main">
             <item library="resources\lib\context_animatedart.py">
@@ -72,7 +71,7 @@
                 </visible>
             </item>
         </menu>
-	</extension>
+    </extension>
 
     <extension library="default.py" point="xbmc.python.library" />
 	<extension library="plugin.py" point="xbmc.python.pluginsource">
@@ -194,13 +193,13 @@
         <source>https://github.com/kodi-community-addons/script.module.simplecache</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt,patrick-klein" version="1.0.38">
-	<requires>
-		<import addon="xbmc.python" version="2.24.0" />
-		<import addon="xbmc.addon" version="12.0.0" />
-        <import addon="script.module.metadatautils" version="1.0.0" />
-        <import addon="script.module.simplecache" version="1.0.0" />
-	</requires>
+</addon><addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" provider-name="marcelveldt and others" version="1.0.42">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="xbmc.addon" version="12.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.31"/>
+        <import addon="script.module.simplecache" version="2.0.2"/>
+    </requires>
 
 	<extension library="plugin.py" point="xbmc.python.pluginsource">
         <provides>video audio</provides>
@@ -217,13 +216,13 @@
 		<website />
 		<source>https://github.com/kodi-community-addons/script.skin.helper.widgets</source>
 	</extension>
-</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt" version="1.0.27">
+</addon><addon id="script.module.thetvdb" name="The TVDB API v2" provider-name="marcelveldt and others" version="1.0.29">
     <requires>
-        <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.requests" version="2.3.0" />
-        <import addon="script.module.simplejson" version="3.3.0" />
-        <import addon="script.module.simplecache" version="1.0.0" />
-        <import addon="script.module.arrow" version="0.6.0" />
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.9.1"/>
+        <import addon="script.module.simplejson" version="3.17.0"/>
+        <import addon="script.module.simplecache" version="2.0.2"/>
+        <import addon="script.module.arrow" version="0.15.5"/>
     </requires>
     <extension library="lib" point="xbmc.python.module" />
     <extension point="xbmc.addon.metadata">
@@ -233,10 +232,10 @@
         <source>https://github.com/kodi-community-addons/script.module.thetvdb</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt" version="1.0.19">
+</addon><addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" provider-name="marcelveldt and others" version="1.0.20">
 	<requires>
-		<import addon="xbmc.python" version="2.13.0" />
-		<import addon="xbmc.addon" version="12.0.0" />
+	    <import addon="xbmc.python" version="3.0.0"/>
+        <import addon="xbmc.addon" version="12.0.0"/>
 	</requires>
     <extension library="default.py" point="xbmc.python.script" />
 	<extension library="service.py" point="xbmc.service" start="login" />
@@ -268,13 +267,12 @@
 		<website />
 		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
 	</extension>
-</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt" version="1.0.33">
+</addon><addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" provider-name="marcelveldt and others" version="1.0.34">
 	<requires>
-		<import addon="xbmc.python" version="2.13.0" />
+		<import addon="xbmc.python" version="3.0.0"/>
 		<import addon="xbmc.addon" version="12.0.0" />
-		<import addon="script.module.pil" version="1.1.7" />
-        <import addon="script.module.simplecache" version="1.0.0" />
-        <import addon="script.module.metadatautils" version="1.0.0" />
+        <import addon="script.module.simplecache" version="1.0.0"/>
+        <import addon="script.module.metadatautils" version="1.0.38"/>
 	</requires>
 
     <extension library="default.py" point="xbmc.python.library" />
@@ -310,9 +308,9 @@
         <description>Requires a Spotify premium account.</description>
         <disclaimer>This product uses SPOTIFY(R) CORE but is not endorsed, certified or otherwise approved in any way by Spotify. Spotify is the registered trade mark of the Spotify Group.</disclaimer>
     </extension>
-</addon><addon id="script.module.musicbrainz" name="Musicbrainz NGS webservice python bindings" provider-name="marcelveldt" version="0.6.0">
+</addon><addon id="script.module.musicbrainz" name="Musicbrainz NGS webservice python bindings" provider-name="marcelveldt and others" version="0.7.0">
   <requires>
-  <import addon="xbmc.python" version="2.24.0" />
+	<import addon="xbmc.python" version="3.0.0"/>
   </requires>
   <extension library="lib" point="xbmc.python.module" />
   <extension point="xbmc.addon.metadata">
@@ -552,10 +550,10 @@
 		<website />
 		<source>https://github.com/kodi-community-addons/plugin.audio.roon</source>
 	</extension>
-</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="12.0.1">
+</addon><addon id="script.module.cherrypy" name="CherryPy Kodi module" provider-name="marcelveldt, CherryPy Team" version="12.0.2">
     <requires>
-        <import addon="xbmc.python" version="2.24.0" />
-        <import addon="script.module.six" version="1.9.0" />
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.six" version="1.14"/>
     </requires>
     <extension library="lib" point="xbmc.python.module" />
     <extension point="xbmc.addon.metadata">
@@ -568,10 +566,10 @@
         <source>https://github.com/kodi-community-addons/script.module.cherrypy</source>
         <platform>all</platform>
     </extension>
-</addon><addon id="script.tv.show.next.aired" name="TV Show - Next Aired" provider-name="WayneD,marcelveldt" version="7.0.1">
+</addon><addon id="script.tv.show.next.aired" name="TV Show - Next Aired" provider-name="WayneD,marcelveldt and others" version="8.0.1">
 	<requires>
-		<import addon="xbmc.python" version="2.1.0" />
-        <import addon="script.module.thetvdb" version="1.0.20" />
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.thetvdb" version="1.0.29" />
 	</requires>
 	<extension library="default.py" point="xbmc.python.script">
 		<provides>executable</provides>
