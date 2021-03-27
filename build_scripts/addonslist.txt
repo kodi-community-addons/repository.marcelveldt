@@ -1,0 +1,24 @@
+https://github.com/marcelveldt/script.module.metadatautils#master
+https://github.com/marcelveldt/script.skin.helper.service#master
+https://github.com/marcelveldt/resource.uisounds.titan.modern#master
+https://github.com/marcelveldt/resource.uisounds.titan.classic#master
+https://github.com/marcelveldt/resource.images.skinicons.wide#master
+https://github.com/marcelveldt/resource.images.skinbackgrounds.titanium#master
+https://github.com/marcelveldt/resource.images.busyspinners.basic#master
+https://github.com/marcelveldt/script.skinshortcuts#master
+https://github.com/marcelveldt/script.module.simplecache#master
+https://github.com/marcelveldt/script.skin.helper.widgets#master
+https://github.com/marcelveldt/script.module.thetvdb#master
+https://github.com/marcelveldt/script.skin.helper.skinbackup#master
+https://github.com/marcelveldt/script.skin.helper.colorpicker#master
+https://github.com/marcelveldt/script.skin.helper.backgrounds#master
+https://github.com/marcelveldt/plugin.audio.spotify#master
+https://github.com/marcelveldt/script.module.musicbrainz#master
+https://github.com/marcelveldt/skin.titan#jarvis#skin.titan.jarvisbeta#Titan BETA for Kodi Jarvis
+https://github.com/marcelveldt/skin.titan#krypton#skin.titan.kryptonbeta#Titan BETA for Kodi Krypton
+https://github.com/marcelveldt/skin.titan#master#skin.titan.leiabeta#Titan BETA for Kodi Leia
+https://github.com/marcelveldt/resource.images.backgroundoverlays.basic#master
+https://github.com/marcelveldt/plugin.audio.squeezebox#master
+https://github.com/marcelveldt/plugin.audio.roon#master
+https://github.com/marcelveldt/script.module.cherrypy#master
+https://github.com/marcelveldt/script.tv.show.next.aired#master

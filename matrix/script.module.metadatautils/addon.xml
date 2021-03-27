@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<addon id="script.module.metadatautils"
+       name="Metadata and Artwork module"
+       version="1.0.38"
+       provider-name="marcelveldt and others">
+    <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+        <import addon="script.module.requests" version="2.9.1"/>
+        <import addon="script.module.beautifulsoup4" version="4.9.3" />
+        <import addon="script.module.thetvdb" version="1.0.29" />
+        <import addon="script.module.musicbrainz" version="0.7.0"/>
+        <import addon="script.module.simplecache" version="2.0.2"/>
+        <import addon="script.module.arrow" version="0.15.5"/>
+    </requires>
+    <extension point="xbmc.python.module" library="lib" />
+    <extension point="xbmc.addon.metadata">
+        <summary lang="en">Metadata and artwork from common sources like TMDB, IMDB, TADB, OMDB and fanart.tv </summary>
+		<summary lang="es">Metadatos e ilustraciones de fuentes comunes como TMDB, IMDB, TADB, OMDB y fanart.tv </summary>
+        <description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
+		<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
+        <news>
+v1.0.38
+- fix for error 'sys' is not defined for extrafanart
+- fix for google
+- fix for colecting imdb.250 (movie and tv)
+- add new rotentomatoes info from omdb 
+v1.0.37
+- Smal fix for theaudiodb scraper
+v1.0.36
+- Fix for theaudiodb scraper,Add some new Art thumb and label
+
+v1.0.35 (wuff)
+- Remove BeautifulSoup3 dependency and use BeautifulSoup4 on Kodi 18 and 19 instead
+            
+v1.0.34 (wuff)
+- Set BeautifulSoup3 and MusicBrainz dependency as optional to allow install on Matrix
+            
+v1.0.33 (wuff)
+- replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
+v1.0.32 (wuff)
+- Remove python requirement for Kodi 18/19 compat
+- Change imdb Top250 parsing from lxml to html.parser
+- replace xbmc.translatePath with xmbcvfs.translatePath
+v1.0.31 (berkhornet)
+- Further fixes for PVR artwork
+v1.0.30 (berkhornet)
+- Kodi 19/Python 3 
+- Fixes for PVR artwork
+- Fix display of artwork when manually selecting from TVDB
+- Fixes for animated art and google
+v1.0.29 (wuff)
+- Remove python requirement for Kodi 18/19 compat
+v1.0.28 (wuff)
+- Kodi 19/Python 3 fixes
+v1.0.27 (finkleandeinhorn)
+- update omdb api key
+v1.0.26 (finkleandeinhorn, cartmandos)
+- enable caching of omdb/tmdb data
+- remove duplicate "Title" parameter
+v1.0.25 (marcelveldt)
+- Last version 30 Mar 2018
+        </news>
+        <license>Apache 2.0</license>
+        <forum>https://forum.kodi.tv/showthread.php?tid=350315</forum>
+        <source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
+        <platform>all</platform>
+		<assets>
+			<icon>resources/icon.png</icon>
+			<fanart>resources/fanart.jpg</fanart>
+			<screenshot>resources/screenshot-01.jpg</screenshot>
+			<screenshot>resources/screenshot-02.jpg</screenshot>
+			<screenshot>resources/screenshot-03.jpg</screenshot>
+			<screenshot>resources/screenshot-04.jpg</screenshot>
+			<screenshot>resources/screenshot-05.jpg</screenshot>
+		</assets>
+    </extension>
+</addon>
