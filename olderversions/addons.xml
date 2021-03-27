@@ -406,50 +406,28 @@ v1.1.25
 			<source>https://github.com/marcelveldt/script.skin.helper.skinbackup</source>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.42" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.38" provider-name="marcelveldt,patrick-klein">
 		<requires>
-			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="xbmc.python" version="2.24.0"/>
 			<import addon="xbmc.addon" version="12.0.0"/>
-			<import addon="script.module.metadatautils" version="1.0.31"/>
-			<import addon="script.module.simplecache" version="2.0.2"/>
+			<import addon="script.module.metadatautils" version="1.0.0" />
+			<import addon="script.module.simplecache" version="1.0.0"/>
 		</requires>
+
 		<extension point="xbmc.python.pluginsource" library="plugin.py">
 			<provides>video audio</provides>
 		</extension>
 		<extension library="service.py" point="xbmc.service" start="login" />
+
 		<extension point="xbmc.addon.metadata">
 			<summary lang="en">Ready to use widgets for all kind of media types</summary>
 			<description></description>
-			<news>
-Version 1.0.42 (2020-09-13 wuff)
-* replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
-
-Version 1.0.41 (2020-09-07 wuff)
-* Fix icons
-
-Version 1.0.40 (2020-05-16 wuff)
-* Remove python requirement for Kodi 18/19 compat
-
-Version 1.0.39 (2019-12-24 wuff)
-* Python 3/Kodi 19 compatibility fixes
-
-Version 1.0.38 (2019-02-25 patrick-klein)
-* similar score weights tweaks
-* other fixes and updates
-
-Version 1.0.37
-* last update from marcelveldt
-			</news>
-			<assets>
-				<icon>icon.png</icon>
-				<fanart>fanart.jpg</fanart>
-			</assets>
 			<language></language>
 			<platform>all</platform>
 			<license>GPL v2.0</license>
 			<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
 			<website></website>
-			<source>https://github.com/kodi-community-addons/script.skin.helper.widgets</source>
+			<source>https://github.com/marcelveldt/script.skin.helper.widgets</source>
 		</extension>
 	</addon>
 	<addon id="script.skinshortcuts" name="Skin Shortcuts" version="1.0.19" provider-name="BigNoid,marcelveldt">
