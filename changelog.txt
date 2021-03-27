@@ -1,0 +1,57 @@
+
+update repository.marcelveldt to 1.0.3
+ - create subdir and put corresponding packages (autodetection of kodi version)
+ - deleted html files (created by built scripts)
+
+	\olderversions\
+		(jarvis,beta,leia)
+		python2
+			plugin.audio.roon-1.0.1
+			plugin.audio.spotify-1.1.58
+			plugin.audio.squeezebox-1.0.19
+			script.module.cherrypy-12.0.1
+			script.module.metadatautils-1.0.37
+			script.module.musicbrainz-0.6.0
+			*	outdated - script.module.simplecache-1.0.16 - NOTE - KODI_18.9 repo - has latest version script.skin.helper.colorpicker-1.0.20  updated by sualfred 
+			script.module.thetvdb-1.0.26
+			script.skin.helper.backgrounds-1.0.34 (NOTE outcommented py dependencie, but it should be installed before anyway, had currupted addon.xml, fixed)
+			*	outdated - script.skin.helper.colorpicker-1.0.12 - NOTE - KODI_18.9 repo - has latest version script.skin.helper.colorpicker-1.0.13  updated by sualfred 
+			script.skin.helper.service-1.1.31 (NOTE outcommented py dependencie, but it should be installed before anyway)
+			script.skin.helper.skinbackup-1.0.19
+			script.skin.helper.widgets-1.0.38
+			
+		independent
+			resource.images.backgroundoverlays.basic-1.0.0
+			resource.images.busyspinners.basic-1.0.1
+			resource.images.skinbackgrounds.titanium-1.0.0
+			resource.images.skinicons.wide-1.0.3
+			resource.uisounds.titan.classic-1.0.0
+			resource.uisounds.titan.modern-1.0.0
+			
+		gui		skin.titan.jarvisbeta , skin.titan.kryptonbeta (2 skins unresolved gui dependencie, just leave packages for archive reasons)
+				skin.titan.leiabeta , just bump gui , no skinfile edit
+			
+	\matrix\
+		independent
+			resource.images.backgroundoverlays.basic-1.0.0
+			resource.images.busyspinners.basic-1.0.1
+			resource.images.skinbackgrounds.titanium-1.0.0
+			resource.images.skinicons.wide-1.0.3
+			resource.uisounds.titan.classic-1.0.0
+			resource.uisounds.titan.modern-1.0.0
+				
+		python 3
+			script.module.cherrypy-12.0.2
+			script.module.metadatautils-1.0.38
+			script.module.musicbrainz-0.7.0
+			*		- NOTE script.module.simplecache-2.0.2* - KODI_19.0 repo- has latest version - updated by sualfred
+			script.module.thetvdb-1.0.29
+			script.skin.helper.backgrounds-1.0.34 (no py dependencie anymore, had currupted addon.xml, fixed)
+			*		-  NOTE  script.skin.helper.colorpicker-2.0.1 - KODI_19.0 repo  has latest version - updated by sualfred 
+			script.skin.helper.service-1.1.33
+			script.skin.helper.skinbackup-1.0.20
+			script.skin.helper.widgets-1.0.42
+			
+		
+	\build_scripts\
+		just md- BUILT SCRIPTS ARE UNTOUCHED - NEED GO OVER 

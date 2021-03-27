@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon
+	id="skin.titan.jarvisbeta"
+	version="3.6.129"
+	name="Titan BETA for Kodi Jarvis"
+	provider-name="marcelveldt,mgonzales">
+	<requires>
+		<import version="5.10.0" addon="xbmc.gui"/>		
+		<import addon="script.skinshortcuts" version="0.6.5"/>
+		<import addon="script.skin.helper.service" version="1.0.0"/>
+        <import addon="script.skin.helper.widgets" version="1.0.0"/>
+        <import addon="script.skin.helper.backgrounds" version="1.0.0"/>
+        <import addon="resource.uisounds.titan.modern" version="1.0.0"/>
+        <import addon="resource.images.skinbackgrounds.titanium" version="1.0.0"/>
+        <import addon="resource.images.skinicons.wide" version="1.0.0"/>
+        <import addon="resource.images.backgroundoverlays.basic" version="1.0.0"/>
+	</requires>
+	<extension
+    point="xbmc.gui.skin"
+    defaultthemename="Textures.xbt"
+    debugging="false">		
+		<res width="1920" height="1080" aspect="16:9" default="true" folder="1080i" />
+		<res width="1920" height="1200" aspect="16:10" default="false" folder="1080i" />
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="bg_BG">Обликът "Titan BETA for Kodi Jarvis" за MediaPortal адаптиран за Kodi, с много добавени функции.</summary>
+		<summary lang="de_DE">MediaPortal's Titan BETA for Kodi Jarvis Skin portiert für Kodi mit jeder Menge neuer Funktionen und einer vollständigen MediaBrowser Integration.</summary>
+		<summary lang="en_AU">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_GB">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_NZ">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="en_US">MediaPortal's Titan BETA for Kodi Jarvis skin ported to Kodi enriched with lot's of features.</summary>
+		<summary lang="es_ES">El skin Titan BETA for Kodi Jarvis de MediaPortal, portado a Kodi y enriquecido con muchas funciones.</summary>
+		<summary lang="fi_FI">Perustuu MediaPortalin Titan BETA for Kodi Jarvis-ulkoasuun.</summary>
+		<summary lang="fr_FR">L'habillage Titan BETA for Kodi Jarvis de MediaPortal adapté à Kodi et enrichi avec de nombreuses fonctionnalités</summary>
+		<summary lang="he_IL">המעטפת Titan BETA for Kodi Jarvis שבמקור נוצרה עבור MediaPortal, שודרגה ביכולות רבות ושילוב מלא של MediaBrowser.</summary>
+		<summary lang="hr_HR">MediaPortal Titan BETA for Kodi Jarvis presvlaka prebačena na Kodi i obogaćena s puno dodatnih mogućnosti.</summary>
+		<summary lang="it_IT">La skin di MediaPortal Titan BETA for Kodi Jarvis arriva su Kodi arricchita con molte feature e piena integrazione di MediaBrowser</summary>
+		<summary lang="lt_LT">MediaPortal'o Titan BETA for Kodi Jarvis teminė išvaizda perkelta į Kodi ir papildyta daugybe funkcijų bei pilna MediaBrowser integracija.</summary>
+		<summary lang="ms_MY">Kulit Titan BETA for Kodi Jarvis MediaPortal diport ke Kodi ditambahbaik dengan pelbagai fitur.</summary>
+		<summary lang="nl_NL">De Titan BETA for Kodi Jarvisskin van MediaPortal is geconverteerd naar Kodi en verrijkt met talloze functionaliteiten</summary>
+		<summary lang="pl_PL">Skóra Titan BETA for Kodi Jarvis przeniesiona z programu MediaPortal do Kodi wzbogacona o dodatkowe funkcje.</summary>
+		<summary lang="pt_BR">A skin Titan BETA for Kodi Jarvis portada do MediaPortal para o Kodi foi enriquecida com várias funcionalidades.</summary>
+		<summary lang="ru_RU">Обложка Titan BETA for Kodi Jarvis была портирована с MediaPortal на Kodi и обзавелась множеством новых возможностей</summary>
+		<summary lang="sr_RS">Titan BETA for Kodi Jarvis маска MediaPortala портована за Kodi обогаћена са доста карактеристика.</summary>
+		<summary lang="sr_RS@latin">Titan BETA for Kodi Jarvis maska MediaPortala portovana za Kodi obogaćena sa dosta karakteristika.</summary>
+		<summary lang="tr_TR">MediaPortal'ın Titan BETA for Kodi Jarvis dış görünümü, pek çok özellikle zenginleştirilerek Kodi'ye aktarıldı.</summary>
+		<summary lang="zh_CN">MediaPortal's Titan BETA for Kodi Jarvis 皮肤富含大量的功能。</summary>
+		<platform>all</platform>
+		<license>GPL v2.0</license>
+		<forum>http://forum.kodi.tv/forumdisplay.php?fid=212</forum>
+		<website>http://forum.kodi.tv/forumdisplay.php?fid=212</website>
+		<email></email>
+		<source></source>
+	</extension>
+</addon>

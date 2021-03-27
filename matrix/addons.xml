@@ -1,0 +1,410 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<addons>
+	<addon id="resource.images.backgroundoverlays.basic" name="Background Overlays Pack - Basic" version="1.0.0" provider-name="marcelveldt, mgonzales">
+		<extension point="kodi.resource.images" compile="false" type="backgroundoverlays" />
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Pack of images that can be used as background overlay</summary>
+			<description lang="en">Pack of images that can be used as background overlay</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="resource.images.busyspinners.basic" name="Animated Busy Spinners Pack" version="1.0.1" provider-name="marcelveldt">
+		<extension point="kodi.resource.images" compile="false" type="busyspinners" />
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Animated Busy Spinners Pack - Titan</summary>
+			<description lang="en">Animated Busy Spinners Pack - Titan</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="resource.images.skinbackgrounds.titanium" name="Skin Backgrounds - Titanium" version="1.0.0" provider-name="marcelveldt">
+		<extension point="kodi.resource.images" compile="false" type="skinbackgrounds" />
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Skin Backgrounds Pack - Titanium</summary>
+			<description lang="en">Skin Backgrounds Pack - Titanium</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="resource.images.skinicons.wide" name="Skin Icons - Wide" version="1.0.3" provider-name="marcelveldt">
+		<extension point="kodi.resource.images" compile="false" type="skinicons" />
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Skin Icons Pack - Wide</summary>
+			<description lang="en">Skin Icons Pack - Wide</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="resource.uisounds.titan.classic" version="1.0.0" name="Titan UI Sounds (Classic)" provider-name="marcelveldt,mgonzales">
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="kodi.resource.uisounds"/>
+		<extension point="kodi.addon.metadata">
+			<summary lang="en">Titan UI Sounds (Classic)</summary>
+			<description lang="en">Titan UI Sounds (Classic)</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="resource.uisounds.titan.modern" version="1.0.0" name="Titan UI Sounds (Modern)" provider-name="marcelveldt,mgonzales">
+		<requires>
+			<import addon="kodi.resource" version="1.0.0"/>
+		</requires>
+		<extension point="kodi.resource.uisounds"/>
+		<extension point="kodi.addon.metadata">
+			<summary lang="en">Titan UI Sounds (Modern)</summary>
+			<description lang="en">Titan UI Sounds (Modern)</description>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="script.module.cherrypy"
+       name="CherryPy Kodi module"
+       version="12.0.2"
+       provider-name="CherryPy Team, marcelveldt and others">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="script.module.six" version="1.14"/>
+		</requires>
+		<extension point="xbmc.python.module" library="lib" />
+		<extension point="xbmc.addon.metadata">
+			<summary>CherryPy webserver packaged as Kodi module</summary>
+			<description>CherryPy is a pythonic, object-oriented web framework
+				CherryPy allows developers to build web applications in much the same way they would build any other object-oriented Python program. This results in smaller source code developed in less time.
+				CherryPy is now more than ten years old and it is has proven to be very fast and stable. It is being used in production by many sites, from the simplest to the most demanding.
+			</description>
+			<license>BSD</license>
+			<source>https://github.com/marcelveldt/script.module.cherrypy</source>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="script.module.metadatautils"
+       name="Metadata and Artwork module"
+       version="1.0.38"
+       provider-name="marcelveldt and others">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="script.module.requests" version="2.9.1"/>
+			<import addon="script.module.beautifulsoup4" version="4.9.3" />
+			<import addon="script.module.thetvdb" version="1.0.29" />
+			<import addon="script.module.musicbrainz" version="0.7.0"/>
+			<import addon="script.module.simplecache" version="2.0.2"/>
+			<import addon="script.module.arrow" version="0.15.5"/>
+		</requires>
+		<extension point="xbmc.python.module" library="lib" />
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Metadata and artwork from common sources like TMDB, IMDB, TADB, OMDB and fanart.tv </summary>
+			<summary lang="es">Metadatos e ilustraciones de fuentes comunes como TMDB, IMDB, TADB, OMDB y fanart.tv </summary>
+			<description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
+			<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
+			<news>
+v1.0.38
+- fix for error 'sys' is not defined for extrafanart
+- fix for google
+- fix for colecting imdb.250 (movie and tv)
+- add new rotentomatoes info from omdb 
+v1.0.37
+- Smal fix for theaudiodb scraper
+v1.0.36
+- Fix for theaudiodb scraper,Add some new Art thumb and label
+
+v1.0.35 (wuff)
+- Remove BeautifulSoup3 dependency and use BeautifulSoup4 on Kodi 18 and 19 instead
+            
+v1.0.34 (wuff)
+- Set BeautifulSoup3 and MusicBrainz dependency as optional to allow install on Matrix
+            
+v1.0.33 (wuff)
+- replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
+v1.0.32 (wuff)
+- Remove python requirement for Kodi 18/19 compat
+- Change imdb Top250 parsing from lxml to html.parser
+- replace xbmc.translatePath with xmbcvfs.translatePath
+v1.0.31 (berkhornet)
+- Further fixes for PVR artwork
+v1.0.30 (berkhornet)
+- Kodi 19/Python 3 
+- Fixes for PVR artwork
+- Fix display of artwork when manually selecting from TVDB
+- Fixes for animated art and google
+v1.0.29 (wuff)
+- Remove python requirement for Kodi 18/19 compat
+v1.0.28 (wuff)
+- Kodi 19/Python 3 fixes
+v1.0.27 (finkleandeinhorn)
+- update omdb api key
+v1.0.26 (finkleandeinhorn, cartmandos)
+- enable caching of omdb/tmdb data
+- remove duplicate "Title" parameter
+v1.0.25 (marcelveldt)
+- Last version 30 Mar 2018
+			</news>
+			<license>Apache 2.0</license>
+			<forum>https://forum.kodi.tv/showthread.php?tid=350315</forum>
+			<source>https://github.com/kodi-community-addons/script.module.metadatautils</source>
+			<platform>all</platform>
+			<assets>
+				<icon>resources/icon.png</icon>
+				<fanart>resources/fanart.jpg</fanart>
+				<screenshot>resources/screenshot-01.jpg</screenshot>
+				<screenshot>resources/screenshot-02.jpg</screenshot>
+				<screenshot>resources/screenshot-03.jpg</screenshot>
+				<screenshot>resources/screenshot-04.jpg</screenshot>
+				<screenshot>resources/screenshot-05.jpg</screenshot>
+			</assets>
+		</extension>
+	</addon>
+	<addon id="script.module.musicbrainz"
+       name="Musicbrainz NGS webservice python bindings"
+       version="0.7.0"
+       provider-name="marcelveldt and others">
+	  <requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+	  </requires>
+	  <extension point="xbmc.python.module"
+				 library="lib" />
+	  <extension point="xbmc.addon.metadata">
+		<summary>Python bindings for Musicbrainz' NGS webservice</summary>
+		<description>Kodi module library for the Python bindings for Musicbrainz' NGS webservice developed by alastair.</description>
+			<assets>
+				<icon>icon.png</icon>
+			</assets>	
+		<license>GNU GENERAL PUBLIC LICENSE V3</license>
+		<source>https://github.com/kodi-community-addons/script.module.musicbrainz</source>
+		<platform>all</platform>
+	  </extension>
+	</addon>
+	<addon id="script.module.thetvdb"
+       name="The TVDB API v2"
+       version="1.0.29"
+       provider-name="marcelveldt and others">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="script.module.requests" version="2.9.1"/>
+			<import addon="script.module.simplejson" version="3.17.0"/>
+			<import addon="script.module.simplecache" version="2.0.2"/>
+			<import addon="script.module.arrow" version="0.15.5"/>
+		</requires>
+		<extension point="xbmc.python.module" library="lib" />
+		<extension point="xbmc.addon.metadata">
+			<summary>TheTVDB API v2 python module for Kodi</summary>
+			<description>TheTVDB API v3 python module for Kodi</description>
+			<assets>
+				<icon>icon.png</icon>
+			</assets>
+			<license>Apache 2.0</license>
+			<source>https://github.com/kodi-community-addons/script.module.thetvdb</source>
+			<platform>all</platform>
+		</extension>
+	</addon>
+	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.34" provider-name="marcelveldt and others">
+		<requires>
+			<import addon="script.module.simplecache" version="1.0.0"/>
+			<import addon="script.module.metadatautils" version="1.0.31"/>
+		</requires>
+		<extension point="xbmc.python.library" library="default.py" />
+		<extension point="xbmc.service" library="service.py" start="login" />
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Helper service for Kodi skins providing rotating backgrounds</summary>
+			<description>Helper service for Kodi skins providing rotating backgrounds</description>
+			<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+			</assets>
+			<language></language>
+			<platform>all</platform>
+			<license>GPL v2.0</license>
+			<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+			<website></website>
+			<source>https://github.com/kodi-community-addons/script.skin.helper.backgrounds</source>
+		</extension>
+	</addon>
+	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.33" provider-name="marcelveldt and others">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="xbmc.addon" version="12.0.0"/>
+			<import addon="script.module.simplejson" version="3.3.0"/>
+			<import addon="script.module.simplecache" version="1.0.0"/>
+			<import addon="script.module.metadatautils" version="1.0.31"/>
+			<import addon="script.module.cherrypy" version="11.0.1"/>
+		</requires>
+		<extension point="kodi.context.item">
+			<menu id="kodi.core.main">
+				<item library="resources\lib\context_animatedart.py">
+				  <label>32024</label>
+				  <visible>!String.IsEmpty(Window(Home).Property(SkinHelper.EnableAnimatedPosters)) + Container.Content(movies)</visible>
+				</item>
+				<item library="resources\lib\context_pvr.py">
+					<label>32023</label>
+					<description>PVR artwork Configuration</description>
+					<visible>
+						!String.IsEmpty(Window(Home).Property(SkinHelper.EnablePvrThumbs)) + 
+						[Window.IsActive(MyPVRChannels.xml) | 
+						Window.IsActive(MyPVRGuide.xml) | Window.IsActive(MyPVRRecordings.xml) | 
+						Window.IsActive(MyPVRTimers.xml) | Window.IsActive(MyPVRSearch.xml)]
+					</visible>
+				</item>
+				<item library="resources\lib\context_music.py">
+					<label>32023</label>
+					<description>Music artwork Configuration</description>
+					<visible>
+						!String.IsEmpty(Window(Home).Property(SkinHelper.EnableMusicArt)) + 
+						[Container.Content(albums) | Container.Content(artists) | Container.Content(songs)]
+					</visible>
+				</item>
+			</menu>
+		</extension>
+		<extension point="xbmc.python.library" library="default.py" />
+		<extension point="xbmc.python.pluginsource" library="plugin.py" />
+		<extension library="service.py" point="xbmc.service" start="login" />
+		<extension point="xbmc.addon.metadata">
+			<summary lang="en">Helper service for Kodi skins</summary>
+			<description>Helper service for Kodi skins</description>
+			<news>
+v1.1.32
+- fix for search dialog
+- add TMDB for TVShow
+- fix for webservice (now use just TMDB Art-Poster and fanart)
+
+v1.1.31
+- fix urllib.parse vs urlparse in utils for Kodi 18
+- add commits from Angelinas1
+
+v1.1.30
+- fix module import of context menu items
+
+v1.1.29
+- compatibility change for CherryPy 17.4.2 and bump version requirement
+
+v1.1.28
+- replace xbmc.LOGNOTICE with xbmc.LOGINFO as LOGNOTICE was removed
+
+v1.1.27
+- Replace xbmc.translatePath with xbmcvfs.translatePath for Kodi 19 compat
+
+v1.1.26
+- Remove python dependency for Kodi18/19 compatibility
+- minor fix
+
+v1.1.25
+- Kodi 19/Python 3 compatibility
+- minor fixes
+			</news>
+			<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+			</assets>
+			<language></language>
+			<platform>all</platform>
+			<license>GPL v2.0</license>
+			<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+			<website></website>
+			<source>https://github.com/kodi-community-addons/script.skin.helper.service</source>
+		</extension>
+	</addon>
+	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.20" provider-name="marcelveldt and others">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="xbmc.addon" version="12.0.0"/>
+		</requires>
+		<extension point="xbmc.python.script" library="default.py" />
+		<extension library="service.py" point="xbmc.service" start="login" />
+		<extension point="xbmc.addon.metadata">
+			<assets>
+				<icon>icon.png</icon>
+				<fanart>fanart.jpg</fanart>
+			</assets>
+			<summary lang="en">Helper service for Kodi skins</summary>
+			<description>Helper service for Kodi skins</description>
+			<language></language>
+			<platform>all</platform>
+			<license>GPL v2.0</license>
+			<forum>http://forum.kodi.tv/showthread.php?tid=235676</forum>
+			<website></website>
+			<source>https://github.com/kodi-community-addons/script.skin.helper.skinbackup</source>
+		</extension>
+	</addon>
+	<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" provider-name="WayneD,marcelveldt and others" version="8.0.1">
+		<requires>
+			<import addon="xbmc.python" version="3.0.0"/>
+			<import addon="script.module.thetvdb" version="1.0.29" />
+		</requires>
+		<extension library="default.py" point="xbmc.python.script">
+			<provides>executable</provides>
+		</extension>
+		<extension library="service.py" point="xbmc.service" start="login" />
+		<extension point="xbmc.addon.metadata">
+			<summary lang="bg">Информация за предстоящите ТВ сериали.</summary>
+			<summary lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament.</summary>
+			<summary lang="de">Erhalten Sie Infos über die nächsten Ausstrahlungstermine der Serien in Ihrer Bibliothek. </summary>
+			<summary lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών</summary>
+			<summary lang="en">Get info for TV Shows Next Aired.</summary>
+			<summary lang="en_NZ">Get info for TV Shows Next Aired.</summary>
+			<summary lang="en_US">Get info for TV Shows Next Aired.</summary>
+			<summary lang="es">Obtener información de las siguientes emisiones de series.</summary>
+			<summary lang="es_MX">Obtener información de las siguientes emisiones de series.</summary>
+			<summary lang="fr">Obtenir les prochaines dates de diffusion de vos séries TV.</summary>
+			<summary lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé.</summary>
+			<summary lang="gl">Obter a info. das Seguintes Emisións das Series de TV.</summary>
+			<summary lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה.</summary>
+			<summary lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju.</summary>
+			<summary lang="hu">Információ a sorozatok következő vetítési idejéről.</summary>
+			<summary lang="it">Ottieni info per le Serie TV trasmesse prossimamente.</summary>
+			<summary lang="ko">TV 쇼 방송 일정을 가져옵니다.</summary>
+			<summary lang="lt">Gauti TV laidos kitos transliacijos informaciją.</summary>
+			<summary lang="nl">Ophalen info voor komende TV afleveringen.</summary>
+			<summary lang="no">Hent informasjon om kommende TV-programmer.</summary>
+			<summary lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie.</summary>
+			<summary lang="pt">Obter info para Próximas Exibições de Séries TV.</summary>
+			<summary lang="pt_BR">Saiba sobre próximas exibições de séries de TV.</summary>
+			<summary lang="ro">Află despre emisiuni care urmează să fie difuzate</summary>
+			<summary lang="ru">Информация о следующих ТВ передачах.</summary>
+			<summary lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale.</summary>
+			<summary lang="sv">Hämta info för nästa sändning av TV-serier.</summary>
+			<summary lang="zh">获取即将播出的剧集的信息。</summary>
+			<description lang="bg">Сваля информация за предстоящите ТВ сериали. Вече никога няма да пропускате епизод от ТВ сериали, които следите.</description>
+			<description lang="ca">Agafar informació de les sèries de TV que es retransmetran pròximament. No te'n perdràs cap mai més.</description>
+			<description lang="de">TV Show Next Aired liefert Termin-Informationen über die anstehenden Episoden der Serien aus der Datenbank. Dazu gibt es eine Wochenansicht mit allen in der nächsten Woche laufenden Episoden sowie (bei vorhandenem Skin Support) die direkte Integration der Informationen in die Ansichten des jeweiligen Skins. Sie werden nie wieder eine Folge verpassen.</description>
+			<description lang="el">Λήψη πληροφοριών για την Επόμενη Προβολή των Τηλ. Σειρών. Δε θα ξαναχάσετε επεισόδιο ποτέ.</description>
+			<description lang="en">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+			<description lang="en_NZ">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+			<description lang="en_US">Get info for TV Shows Next Aired. You'll never miss one again.</description>
+			<description lang="es">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+			<description lang="es_MX">Obtener información de las siguientes emisiones de series. Nunca te perderás una de nuevo.</description>
+			<description lang="fr">Ce script interroge votre médiathèque puis vas récupérer les infos sur les prochaines diffusions de vos séries. vous n'en manquerez plus aucune.</description>
+			<description lang="fr_CA">Obtenir les infos de prochaine diffusion des séries télé. Vous n'en manquerez plus jamais une.</description>
+			<description lang="gl">Obter a info. das Seguintes Emisións das Series de TV. Non esquecerá ningunha.</description>
+			<description lang="he">קבל פרטי השידור הבא של תכניות הטלוויזיה. לעולם לא תחמיץ שוב פרק.</description>
+			<description lang="hr">Nabavite informacije za sljedeću emitiranu TV seriju. Nikada nećete propustiti nijednu.</description>
+			<description lang="hu">Információ a sorozatok következő vetítési idejéről. Soha nem marad le mégegyszer semmiről.</description>
+			<description lang="it">Ottieni info per le Serie TV trasmesse prossimamente. Non ne perderai più una.</description>
+			<description lang="ko">TV 쇼 방송 일정을 가져옵니다. 놓치는 일은 절대 없을 것입니다.</description>
+			<description lang="lt">Gauti TV laidos kitos transliacijos informaciją. Jūs niekada daugiau jos nepraleisite.</description>
+			<description lang="nl">Ophalen info voor komende TV shows. Je zult ze nooit meer missen.</description>
+			<description lang="no">Få informasjon om neste TV-sending. Du vil aldri gå glipp av en episode igjen.</description>
+			<description lang="pl">Pobieraj informacje o odcinkach seriali wkrótce na antenie. Nigdy już żadnego nie przegapisz.</description>
+			<description lang="pt">Obter info para Próximas Exibições de Séries TV. Nunca mais vai perder uma.</description>
+			<description lang="pt_BR">Saiba sobre próximas exibições de séries de TV. Você nunca perderá um episódio.</description>
+			<description lang="ro">Află despre emisiuni care urmează să fie difuzate. Nu vei mai rata nici una.</description>
+			<description lang="ru">Получает информацию о следующих ТВ передачах. Теперь Вы никогда не пропустите ни одну ТВ передачу.</description>
+			<description lang="sl">Pridobi informacije TV oddaj ki se bodo predvajale. Nikoli več ne boste zamudili nobene epizode.</description>
+			<description lang="sv">Hämta info för nästa sändning av TV-Serie. Du kommer inte att missa en igen.</description>
+			<description lang="zh">获取即将播出的剧集的信息。你不会再错过好节目了。</description>
+			<language />
+			<platform>all</platform>
+			<license>GPL v2.0</license>
+			<forum>http://forum.xbmc.org/showthread.php?tid=186090</forum>
+			<website>https://github.com/kodi-community-addons/script.tv.show.next.aired</website>
+			<source>https://github.com/kodi-community-addons/script.tv.show.next.aired.git</source>
+		</extension>
+	</addon>
+</addons>
