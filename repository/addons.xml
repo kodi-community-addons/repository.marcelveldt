@@ -7,8 +7,8 @@
 		<extension point="xbmc.addon.repository" name="Marcelveldt's BETA repository">
 			<dir>
 				<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/addons.xml</info>
-				<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/addons.xml.md5</checksum>
-				<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repository/</datadir>
+				<checksum>https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repositories/addons.xml.md5</checksum>
+				<datadir zip="true">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/repositories/</datadir>
 			</dir>
 			<dir minversion="18.9.700">
 				<info compressed="false">https://raw.githubusercontent.com/kodi-community-addons/repository.marcelveldt/master/matrix/addons.xml</info>
