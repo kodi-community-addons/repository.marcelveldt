@@ -322,7 +322,7 @@ v1.1.25
 			<source>https://github.com/kodi-community-addons/script.skin.helper.service</source>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.20" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.21" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
 			<import addon="xbmc.addon" version="12.0.0"/>
