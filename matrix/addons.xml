@@ -88,7 +88,7 @@
 	</addon>
 	<addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.39"
+       version="1.0.40"
        provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
@@ -106,6 +106,8 @@
 			<description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
 			<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
 			<news>
+v1.0.40
+- Fix for missing TADB key
 v1.0.39
 - Remove unicode
 - Fix for break site Kyradb
@@ -211,7 +213,7 @@ v1.0.25 (marcelveldt)
 			<platform>all</platform>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.34" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.35" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="script.module.simplecache" version="1.0.0"/>
 			<import addon="script.module.metadatautils" version="1.0.31"/>
@@ -562,6 +564,25 @@ Version 1.0.37
     <forum>http://forum.xbmc.org/showthread.php?tid=361925</forum>
     <email></email>
   </extension>
+</addon>
+	<addon id="script.skin.helper.colorpicker" name="Skin Helper Service ColorPicker" version="2.0.1" provider-name="marcelveldt,sualfred and others">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0"/>
+		<import addon="script.module.pil" version="1.1.7"/>
+	</requires>
+	<extension point="xbmc.python.library" library="default.py" />
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</summary>
+		<description lang="en_GB">Colorpicker for Kodi Skins. Part of Skin Helper Suite</description>
+		<platform>all</platform>
+		<license>GPL-2.0</license>
+		<forum>https://forum.kodi.tv/showthread.php?tid=235676</forum>
+		<source>https://github.com/kodi-community-addons/script.skin.helper.colorpicker</source>
+		<assets>
+			<icon>icon.png</icon>
+			<fanart>fanart.jpg</fanart>
+		</assets>
+	</extension>
 </addon>
 
 </addons>
