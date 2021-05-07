@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.34" provider-name="marcelveldt and others">
+    <addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.36" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -44,12 +44,18 @@
         <summary lang="en">Helper service for Kodi skins</summary>
         <description>Helper service for Kodi skins</description>
         <news>
+v1.1.36
+- Hungarian lang created
+- remove get_repo_addoninfo
+- Fix for "Resume" in dialog
+v1.1.35
+- fix setskinconstant
+
 v1.1.34
 - fix correct skin settings
 - Fix for skinstring, selectimage, and overlayertexture
 - Fix for resourceaddons
 - Matrix Py3 changes
-
 v1.1.32
 - fix for search dialog
 - add TMDB for TVShow
