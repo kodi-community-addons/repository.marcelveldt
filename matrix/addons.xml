@@ -88,7 +88,7 @@
 	</addon>
 	<addon id="script.module.metadatautils"
        name="Metadata and Artwork module"
-       version="1.0.41"
+       version="1.0.42"
        provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
@@ -106,6 +106,9 @@
 			<description lang="en">The metadata and artwork module for Kodi provides rich metadata, including artwork for various metatypes by scraping (and caching) this information from sites like TMDB, musicbrainz and fanart.tv. This product uses the TMDb API but is not endorsed or certified by TMDb.</description>
 			<description lang="es">El módulo de metadatos e ilustraciones para Kodi proporciona metadatos enriquecidos, que incluyen ilustraciones paravarios metatipos al raspar (y almacenar en caché) esta información se extrae de sitios como TMDB, musicbrainz and fanart.tv.[CR][CR]Este producto utiliza la API de TMDb pero no está avalado ni certificado por TMDb</description>
 			<news>
+v1.0.42
+- Fixed ExtraPosters
+- Fix for "Resume" in dialog
 v1.0.41
 - Fixed ExtraPosters
 - Fix for "Resume" in dialog
@@ -216,7 +219,7 @@ v1.0.25 (marcelveldt)
 			<platform>all</platform>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.35" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.backgrounds" name="Skin Helper Service Backgrounds" version="1.0.36" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="script.module.simplecache" version="1.0.0"/>
 			<import addon="script.module.metadatautils" version="1.0.31"/>
@@ -238,7 +241,7 @@ v1.0.25 (marcelveldt)
 			<source>https://github.com/kodi-community-addons/script.skin.helper.backgrounds</source>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.36" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.37" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
 			<import addon="xbmc.addon" version="12.0.0"/>
@@ -280,6 +283,9 @@ v1.0.25 (marcelveldt)
 			<summary lang="en">Helper service for Kodi skins</summary>
 			<description>Helper service for Kodi skins</description>
 			<news>
+v1.1.37
+- fix for saveskinimage
+- Update listitem_monitor.py
 v1.1.36
 - Hungarian lang created
 - remove get_repo_addoninfo
@@ -335,7 +341,7 @@ v1.1.25
 			<source>https://github.com/kodi-community-addons/script.skin.helper.service</source>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.21" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.skinbackup" name="Skin Helper Service Skin Backup" version="1.0.22" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
 			<import addon="xbmc.addon" version="12.0.0"/>
