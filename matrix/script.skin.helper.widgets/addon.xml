@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-    <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.44" provider-name="marcelveldt and others">
+    <addon id="script.skin.helper.widgets" name="Skin Helper Service Widgets" version="1.0.45" provider-name="marcelveldt and others">
     <requires>
 		<import addon="xbmc.python" version="3.0.0"/>
         <import addon="xbmc.addon" version="12.0.0"/>
@@ -16,6 +16,9 @@
         <summary lang="en">Ready to use widgets for all kind of media types</summary>
         <description></description>
 	<news>
+Version 1.0.45
+* Change settings.xml
+
 Version 1.0.44
 * fix for similar
 
