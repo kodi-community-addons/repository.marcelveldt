@@ -243,7 +243,7 @@ v1.0.25 (marcelveldt)
 			<source>https://github.com/kodi-community-addons/script.skin.helper.backgrounds</source>
 		</extension>
 	</addon>
-	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.39" provider-name="marcelveldt and others">
+	<addon id="script.skin.helper.service" name="Skin Helper Service" version="1.1.40" provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
 			<import addon="xbmc.addon" version="12.0.0"/>
@@ -284,6 +284,8 @@ v1.0.25 (marcelveldt)
 			<summary lang="en">Helper service for Kodi skins</summary>
 			<description>Helper service for Kodi skins</description>
 			<news>
+v1.1.40
+- bump version
 v1.1.39
 - clean trace of webservice
 v1.1.38
