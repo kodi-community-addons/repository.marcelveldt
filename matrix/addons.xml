@@ -219,7 +219,7 @@ v1.0.25 (marcelveldt)
 	</addon>
 	<addon id="script.module.thetvdb"
        name="The TVDB API v2"
-       version="1.0.29"
+       version="1.0.30"
        provider-name="marcelveldt and others">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
