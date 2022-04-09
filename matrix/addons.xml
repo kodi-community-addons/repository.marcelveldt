@@ -457,10 +457,10 @@ Version 1.0.37
 			<source>https://github.com/kodi-community-addons/script.skin.helper.widgets</source>
 		</extension>
 	</addon>
-	<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" provider-name="WayneD,marcelveldt and others" version="8.0.1">
+	<addon id="script.tv.show.next.aired" name="TV Show - Next Aired" provider-name="WayneD,marcelveldt and others" version="8.0.2">
 		<requires>
 			<import addon="xbmc.python" version="3.0.0"/>
-			<import addon="script.module.thetvdb" version="1.0.29" />
+			<import addon="script.module.thetvdb" version="1.0.30" />
 		</requires>
 		<extension library="default.py" point="xbmc.python.script">
 			<provides>executable</provides>
