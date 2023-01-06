@@ -18,4 +18,4 @@ OR
 
 
 To Browse repo content in browser:
-https://github.com/kodi-community-addons/repository.marcelveldt/repository
+https://github.com/kodi-community-addons/repository.marcelveldt/tree/master/matrix
